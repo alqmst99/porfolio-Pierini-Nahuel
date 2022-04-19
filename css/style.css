@@ -1,0 +1,93 @@
+
+.social{
+	text-align: center;
+	display: block;
+	position: relative;
+	background-color: #0f5687;
+
+}
+.container-login{
+	display: none;
+
+	border: solid #892;
+	border-radius: 20px;
+	background-color: #812;
+	color: #429;
+	text-align: center;
+}
+.container-register{
+	display: none;
+
+	border: solid #892;
+	
+	background-color: #812;
+	color: #429;
+	text-align: center;
+}
+.conatainer-forgotten{
+	display: none;
+
+	border: solid #892;
+	border-radius: 20px;
+	background-color: #812;
+	color: #429;
+	text-align: center;
+}
+.banner-img{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	left: 20%;
+	border: solid #f0a4d3;
+}
+
+.container-about{
+	display:inline-block;
+	text-align: center;
+	border: solid #238;
+
+}
+.container-experience{
+	display:block;
+	text-align: center;
+	border: solid #238;
+
+}
+.container-education{
+	display:block;
+	text-align: center;
+	border: solid #238;
+
+}
+.container-skills{
+	display:block;
+	text-align: center;
+	border: solid #238;
+
+}
+.container-proyects{
+	display-block;
+	text-align: center;
+	border: solid #238;
+
+}
+//*button {
+	position: relative;
+	display: block;
+	left: 100%;
+	float: left;
+}
+button:hover{
+	background-color: transparent;
+	transition: 0.1;
+
+}*//
+button .button-menu{
+	background-color: #0f5687;
+	border: solid  #0f5687;
+}
+.button-img{
+	position:absolute;
+	display: block;
+
+}
