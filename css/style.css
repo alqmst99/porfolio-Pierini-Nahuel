@@ -86,7 +86,17 @@ button:hover{
 }*//
 button .button-menu{
 	background-color: #0f5687;
-	border: solid  #0f5687;
+	border: none;	
+}
+button img {
+	position: relative;
+	max-width: 30px;
+	max-height: 30px;
+border-radius: 50%;
+}
+.button-menu{
+	background-color: transparent;
+	border-radius: 50%;
 }
 .button-img{
 	position:absolute;
