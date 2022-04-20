@@ -4,6 +4,8 @@
 	display: block;
 	position: relative;
 	background-color: #0f5687;
+	
+
 
 }
 .container-login{
@@ -90,4 +92,57 @@ button .button-menu{
 	position:absolute;
 	display: block;
 
+}
+.logo{
+	position: relative;
+	display: inline-block;
+	background-color: black;
+	height: 35px;
+	height: 35px;
+	z-index: 5;
+}
+.about-img{
+	position: relative;
+	display: inline-block;
+	right: 40%;
+}
+
+.perfil{
+	position: relative;
+	display: inline-block;
+	max-height: 100px;
+	max-width: 100px;
+	border: solid #24ff41;
+	border-radius: 50%;
+	right: 30%;
+}
+.img-edit{
+	position: relative;
+	display: inline-block;
+	right: 45%;
+}
+.about-button{
+	display: inline-block;
+	position: relative;
+	left: 40%;
+}
+.about-experience{
+	display: inline-block;
+	position: relative;
+	left: 40%;
+}
+.about-education{
+	display: inline-block;
+	position: relative;
+	left: 40%;
+}
+.about-skills{
+	display: inline-block;
+	position: relative;
+	left: 40%;
+}
+.about-proyects{
+	display: inline-block;
+	position: relative;
+	left: 40%;
 }
