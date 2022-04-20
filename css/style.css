@@ -47,31 +47,32 @@
 	display:inline-block;
 	text-align: center;
 	border: solid #238;
-
+margin-top: 10px;
 }
 .container-experience{
 	display:block;
 	text-align: center;
 	border: solid #238;
-
+margin-top: 10px;
 }
 .container-education{
 	display:block;
 	text-align: center;
 	border: solid #238;
+	margin-top: 10px;
 
 }
 .container-skills{
 	display:block;
 	text-align: center;
 	border: solid #238;
-
+	margin-top: 10px;
 }
 .container-proyects{
 	display-block;
 	text-align: center;
 	border: solid #238;
-
+	margin-top: 10px;
 }
 //*button {
 	position: relative;
