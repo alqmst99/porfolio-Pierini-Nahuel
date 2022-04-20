@@ -115,7 +115,7 @@ border-radius: 50%;
 .about-img{
 	position: relative;
 	display: inline-block;
-	right: 40%;
+	align-items: initial;
 }
 
 .perfil{
@@ -125,7 +125,8 @@ border-radius: 50%;
 	max-width: 100px;
 	border: solid #24ff41;
 	border-radius: 50%;
-	right: 30%;
+	right: 20%;
+
 }
 .img-edit{
 	position: relative;
