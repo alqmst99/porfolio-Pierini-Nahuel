@@ -4,9 +4,10 @@
 	display: block;
 	position: relative;
 	background-color: #0f5687;
-	
-
-
+	}
+h2 {
+	border: solid black;
+	margin-top: 0;
 }
 .container-login{
 	display: none;
@@ -38,16 +39,16 @@
 .banner-img{
 	height: 100%;
 	width: 100%;
-	text-align: center;
-	left: 20%;
-	border: solid #f0a4d3;
+	
+	
+	display: inline-block;
 }
 
 .container-about{
 	display:inline-block;
 	text-align: center;
 	border: solid #238;
-margin-top: 10px;
+margin-top: 0px;
 }
 .container-experience{
 	display:block;
@@ -69,24 +70,14 @@ margin-top: 10px;
 	margin-top: 10px;
 }
 .container-proyects{
-	display-block;
+	display: block;
 	text-align: center;
 	border: solid #238;
 	margin-top: 10px;
 }
-//*button {
-	position: relative;
-	display: block;
-	left: 100%;
-	float: left;
-}
-button:hover{
-	background-color: transparent;
-	transition: 0.1;
 
-}*//
 button .button-menu{
-	background-color: #0f5687;
+	background-color: #045687;
 	border: none;	
 }
 button img {
@@ -98,10 +89,11 @@ border-radius: 50%;
 .button-menu{
 	background-color: transparent;
 	border-radius: 50%;
+	border: none;
 }
 .button-img{
 	position:absolute;
-	display: block;
+	display:inline-block;
 
 }
 .logo{
@@ -115,7 +107,7 @@ border-radius: 50%;
 .about-img{
 	position: relative;
 	display: inline-block;
-	align-items: initial;
+	border-radius: 50%;
 }
 
 .perfil{
@@ -125,13 +117,11 @@ border-radius: 50%;
 	max-width: 100px;
 	border: solid #24ff41;
 	border-radius: 50%;
-	right: 20%;
+	
 
 }
-.img-edit{
-	position: relative;
-	display: inline-block;
-	right: 45%;
+
+
 }
 .about-button{
 	display: inline-block;
@@ -158,3 +148,17 @@ border-radius: 50%;
 	position: relative;
 	left: 40%;
 }
+.delete img, .edit img{
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+.delete, .edit{
+	background-color: transparent;
+	border: none;
+}
+.delete:hover, .edit:hover{
+	background-color: yellow;
+	border: solid black;
+	border-radius: 50%;
+	  }
