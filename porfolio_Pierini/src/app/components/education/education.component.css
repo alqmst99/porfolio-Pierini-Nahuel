@@ -1,0 +1,15 @@
+.row{
+    
+    background: #341066;
+    color: #ffffff;
+    margin: 0px;
+    text-align: center;
+    align-items: center;
+}
+ul{
+    padding: 5px;
+    border: 10px solid #000;
+}
+h2, h3{
+    display: inline;
+}
