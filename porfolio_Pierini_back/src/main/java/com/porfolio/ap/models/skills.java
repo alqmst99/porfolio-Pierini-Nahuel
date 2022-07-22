@@ -10,9 +10,6 @@ import java.awt.*;
 
 @Entity
 public class skills {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idSkill;
     private String nameSkill;
     private String levelSkill;
     private Image imgSkill;
@@ -21,7 +18,6 @@ public class skills {
     }
 
     public skills(String idSkill, String nameSkill, String levelSkill) {
-        this.idSkill = idSkill;
         this.nameSkill = nameSkill;
         this.levelSkill = levelSkill;
     }

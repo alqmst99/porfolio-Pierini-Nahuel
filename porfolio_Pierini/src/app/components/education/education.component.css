@@ -13,3 +13,11 @@ ul{
 h2, h3{
     display: inline;
 }
+button{
+   
+    border-radius:50%;
+    background: #341066;
+
+
+ 
+}
