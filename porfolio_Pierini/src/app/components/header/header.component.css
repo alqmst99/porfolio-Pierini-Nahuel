@@ -1,0 +1,14 @@
+div{
+    background: #341066;
+
+}
+app-social{
+    float: right;
+    margin-top: 25px;
+}
+app-login{
+    float: right;
+    margin-top: 25px;
+    align-items: center;
+    margin-left: 5px;
+}

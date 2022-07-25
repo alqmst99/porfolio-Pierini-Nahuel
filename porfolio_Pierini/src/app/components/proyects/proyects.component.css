@@ -1,0 +1,28 @@
+.row{
+    padding: 20px;
+    background: #341066;
+    color: #ffffff;
+    margin: 0px;
+    text-align: center;
+    align-items: center;
+}
+.container{
+width: auto;
+border: 10px solid #000;
+}
+.text-pr, .img-pr{
+    display: inline-block;
+    text-align: justify;
+}
+.img-pr1{
+    box-shadow: 10px 10px 10px black;
+    display: inline-block;
+}
+button{
+   
+    border-radius:50%;
+    background: #341066;
+
+
+ 
+}

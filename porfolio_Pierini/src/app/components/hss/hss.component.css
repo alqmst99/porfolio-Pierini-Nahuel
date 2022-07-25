@@ -1,0 +1,14 @@
+.row{
+    padding: 20px;
+    background: #341066;
+    color: #ffffff;
+    margin: 0px;
+    text-align: center;
+    align-items: center;
+}
+button{
+   
+    border-radius:50%;
+    background: #341066;
+
+}

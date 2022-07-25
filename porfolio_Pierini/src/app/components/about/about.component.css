@@ -1,0 +1,30 @@
+.row{
+    padding: 15px;
+    
+        
+}
+#about-name{
+    text-align: left;
+}
+div{
+    
+    background: #341066;
+    color: #ffffff;
+    margin: 0px;
+    text-align: center;
+    align-items: center;
+}
+.img-fluid{
+    border: 5px ridge #852035 ;
+    border-radius: 50%;
+    width: 100%;
+
+}
+button{
+   
+    border-radius:50%;
+    background: #341066;
+
+
+ 
+}
