@@ -1,10 +1,13 @@
-package com.porfolio.ap.models;
+package com.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@Table(name = "usuario", indexes = {
+        @Index(name = "idx_usuario_iduser", columnList = "idUser")
+})
 public class usuario implements Serializable {
     @Id
     @GeneratedValue (strategy=GenerationType.AUTO)
@@ -20,7 +23,7 @@ public class usuario implements Serializable {
    private List< education>educationList;
 
     @OneToMany(fetch =  FetchType.LAZY, mappedBy = "idExp")
-    private List< experience>experienceList;
+    private List<experience>experienceList;
     @OneToMany( fetch = FetchType.LAZY, mappedBy = "idSkill")
     private List< skills>skillsList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idProy")

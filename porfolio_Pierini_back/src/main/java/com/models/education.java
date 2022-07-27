@@ -1,12 +1,12 @@
-package com.porfolio.ap.models;
+package com.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "education", indexes = {
+        @Index(name = "idx_education_idedu", columnList = "idEdu")
+})
 public class education {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)

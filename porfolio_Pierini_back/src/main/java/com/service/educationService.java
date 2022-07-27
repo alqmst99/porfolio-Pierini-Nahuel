@@ -1,7 +1,7 @@
-package com.porfolio.ap.service;
+package com.service;
 
-import com.porfolio.ap.models.education;
-import com.porfolio.ap.reporsitory.educationRepo;
+import com.models.education;
+import com.reporsitory.educationRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

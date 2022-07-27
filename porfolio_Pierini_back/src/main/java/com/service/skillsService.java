@@ -1,8 +1,9 @@
-package com.porfolio.ap.service;
+package com.service;
 
-import com.porfolio.ap.models.experience;
-import com.porfolio.ap.models.skills;
-import com.porfolio.ap.reporsitory.skillRepo;
+import com.models.experience;
+import com.models.skills;
+
+import com.reporsitory.skillRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.Entity;
@@ -13,6 +14,11 @@ import java.util.List;
 @Transactional
 public class skillsService {
     private final skillRepo SkillRepo;
+
+    public skillRepo getSkillRepo() {
+        return SkillRepo;
+    }
+
     @Autowired
     public skillsService(skillRepo skillRepo) {
         this.SkillRepo = skillRepo;

@@ -1,6 +1,6 @@
-package com.porfolio.ap.reporsitory;
+package com.reporsitory;
 
-import com.porfolio.ap.models.skills;
+import com.models.skills;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface skillRepo extends JpaRepository<skills,Long> {

@@ -1,8 +1,7 @@
-package com.porfolio.ap.service;
+package com.service;
 
-import com.porfolio.ap.models.education;
-import com.porfolio.ap.models.proyects;
-import com.porfolio.ap.reporsitory.proyectsRepo;
+import com.models.proyects;
+import com.reporsitory.proyectsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.Entity;

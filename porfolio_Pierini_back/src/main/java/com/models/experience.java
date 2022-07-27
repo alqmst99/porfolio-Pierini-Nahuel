@@ -1,11 +1,13 @@
-package com.porfolio.ap.models;
+package com.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.service.experienceService;
+
+import javax.persistence.*;
 import java.util.Date;
 @Entity
+@Table(name = "experience", indexes = {
+        @Index(name = "idx_experience_idexp", columnList = "idExp")
+})
 public class experience {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,5 +28,16 @@ public class experience {
         this.fechafExp = fechafExp;
         this.descExp = descExp;
         this.imageExp = imageExp;
+    }
+
+    @OneToOne(optional = false)
+    private experienceService service;
+
+    public experienceService getService() {
+        return service;
+    }
+
+    public void setService(experienceService service) {
+        this.service = service;
     }
 }

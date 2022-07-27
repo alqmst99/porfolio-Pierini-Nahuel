@@ -1,4 +1,4 @@
-package com.porfolio.ap.models;
+package com.models;
 
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 

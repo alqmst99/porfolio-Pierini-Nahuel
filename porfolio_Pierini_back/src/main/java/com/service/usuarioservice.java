@@ -1,7 +1,7 @@
 package com.service;
 
-import com.porfolio.ap.models.usuario;
-import com.porfolio.ap.reporsitory.usuarioRepo;
+import com.models.usuario;
+import com.reporsitory.usuarioRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,27 +10,30 @@ import java.util.List;
 
 @Service
 @Transactional
-public class usuarioservice {
-    private final usuarioRepo UsuarioRepo;
 
-    public usuarioservice(usuarioRepo usuarioRepo) {
+
+public class usuarioService {
+    private final usuarioRepo UsuarioRepo;
+    @Autowired
+    public usuarioService(usuarioRepo usuarioRepo) {
         this.UsuarioRepo = usuarioRepo;
     }
 
-    @Autowired
 
-    public usuario addUser( usuario Usuario){
-        return UsuarioRepo.save (Usuario);
+
+    public usuario addUser(usuario Usuario){
+        return UsuarioRepo.save(Usuario);
     }
-    public List<usuario> searchUser(){
+    public List<usuario> searchUser(long id){
         return UsuarioRepo.findAll();
     }
     public usuario updateUser(usuario Usuario){
         return UsuarioRepo.save(Usuario);
 
     }
-    public void borrarUser( Long id){
+    public void borrarEdu( Long id){
         UsuarioRepo.deleteById (id);
     }
+
 
 }

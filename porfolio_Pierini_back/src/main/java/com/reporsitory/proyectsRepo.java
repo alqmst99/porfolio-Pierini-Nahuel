@@ -1,6 +1,6 @@
-package com.porfolio.ap.reporsitory;
+package com.reporsitory;
 
-import com.porfolio.ap.models.proyects;
+import com.models.proyects;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface proyectsRepo extends JpaRepository <proyects,Long> {

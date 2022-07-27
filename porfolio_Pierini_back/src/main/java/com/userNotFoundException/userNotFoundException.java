@@ -1,4 +1,4 @@
-package com.porfolio.ap.userNotFoundException;
+package com.userNotFoundException;
 
 public class userNotFoundException extends RuntimeException {
     public userNotFoundException( String messege){

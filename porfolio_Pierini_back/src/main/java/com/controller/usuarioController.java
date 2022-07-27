@@ -1,7 +1,8 @@
-package com.porfolio.ap.controller;
+package com.controller;
 
-import com.porfolio.ap.models.usuario;
-import com.porfolio.ap.userNotFoundException.service.usuarioService;
+import com.models.usuario;
+
+import com.service.usuarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ public class usuarioController {
     }
     @GetMapping("/id/{id}")
     public ResponseEntity <usuario> getUsuario( @PathVariable ("id") long id){
-        usuario Usuario= UsuarioService.Usuarioid(id);
+        usuario Usuario = (usuario) UsuarioService.searchUser(id);
         return new ResponseEntity<>(Usuario, HttpStatus.OK);
     }
 @PutMapping ("/update")
