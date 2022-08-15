@@ -7,8 +7,10 @@
     align-items: center;
 }
 ul{
-    padding: 5px;
-    border: 10px solid #000;
+    width: auto;
+    border: 5px solid #000;
+    border-radius: 10px;
+    box-shadow:10px 10px 10px black ;
 }
 h2, h3{
     display: inline;
