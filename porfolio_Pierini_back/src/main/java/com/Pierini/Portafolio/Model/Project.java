@@ -6,7 +6,7 @@ package com.Pierini.Portafolio.Model;
 
 /**
  *
- * @author Nahue
+ * @author Nahuel Pierini
  */
 public class Project {
     
