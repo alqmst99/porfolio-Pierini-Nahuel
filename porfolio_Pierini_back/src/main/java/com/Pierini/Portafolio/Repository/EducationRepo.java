@@ -1,4 +1,7 @@
 package com.Pierini.Portafolio.Repository;
 
-public interface EducationRepo {
+import com.Pierini.Portafolio.Model.Education;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EducationRepo extends JpaRepository <Education, Long>{
 }
