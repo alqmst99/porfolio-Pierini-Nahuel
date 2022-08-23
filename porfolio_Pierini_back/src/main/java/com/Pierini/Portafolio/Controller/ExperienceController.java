@@ -4,10 +4,6 @@
  */
 package com.Pierini.Portafolio.Controller;
 
-/**
- *
- * @author Nahue
- */
 public class ExperienceController {
     
 }
