@@ -3,7 +3,6 @@ package com.Pierini.Portafolio.Controller;
 
 import com.Pierini.Portafolio.Model.Usuario;
 import com.Pierini.Portafolio.Service.UsuarioService;
-import com.Pierini.porfolio.models.usuario;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

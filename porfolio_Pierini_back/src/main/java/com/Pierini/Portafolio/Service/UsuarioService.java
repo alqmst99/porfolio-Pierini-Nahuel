@@ -1,5 +1,6 @@
 package com.Pierini.Portafolio.Service;
-import Exception.UserNotFoundException;
+
+import Except.UserNotFound;
 import com.Pierini.Portafolio.Model.Usuario;
 import com.Pierini.Portafolio.Repository.UsuarioRepo;
 import java.util.List;
@@ -29,6 +30,6 @@ public class UsuarioService {
         usuarioRepo.deleteById(id);
     }
     public Usuario searchUser(long id){
-        return usuarioRepo.findById(id).orElseThrow(()->new UserNotFoundException ("usuario no encontrado") );
+        return usuarioRepo.findById(id).orElseThrow(()->new UserNotFound ("usuario no encontrado") );
     }
 }

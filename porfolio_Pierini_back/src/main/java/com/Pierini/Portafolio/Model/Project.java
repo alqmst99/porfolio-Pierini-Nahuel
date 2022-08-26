@@ -18,7 +18,7 @@ import javax.persistence.Id;
 
 public class Project {
       @Id @GeneratedValue(strategy=GenerationType.AUTO) 
-   private Long idPoy;
+   private Long idProy;
    private String tituloProy;        
    private Date  fechaIProy;
    private Date FechaFProy;
@@ -27,8 +27,8 @@ public class Project {
     public Project() {
     }
 
-    public Project(Long idPoy, String tituloProy, Date fechaIProy, Date FechaFProy, String imagenProy) {
-        this.idPoy = idPoy;
+    public Project(Long idProy, String tituloProy, Date fechaIProy, Date FechaFProy, String imagenProy) {
+        this.idProy = idProy;
         this.tituloProy = tituloProy;
         this.fechaIProy = fechaIProy;
         this.FechaFProy = FechaFProy;
@@ -36,11 +36,11 @@ public class Project {
     }
 
     public Long getIdPoy() {
-        return idPoy;
+        return idProy;
     }
 
-    public void setIdPoy(Long idPoy) {
-        this.idPoy = idPoy;
+    public void setIdPoy(Long idProy) {
+        this.idProy = idProy;
     }
 
     public String getTituloProy() {

@@ -14,14 +14,15 @@ public class Education {
   @Id @GeneratedValue(strategy=GenerationType.AUTO) 
    private Long idEdu;
    private String tituloEdu;
-   private Date  fechaIEdu;
-   private Date FechaFEdu;
+
+   private  int fechaIEdu;
+   private int FechaFEdu;
    private String imagenEdu;
 
     public Education() {
     }
 
-    public Education(Long idEdu, String tituloEdu, Date fechaIEdu, Date FechaFEdu, String imagenEdu) {
+    public Education(Long idEdu, String tituloEdu, int fechaIEdu, int FechaFEdu, String imagenEdu) {
         this.idEdu = idEdu;
         this.tituloEdu = tituloEdu;
         this.fechaIEdu = fechaIEdu;
@@ -29,6 +30,7 @@ public class Education {
         this.imagenEdu = imagenEdu;
     }
 
+  
     public Long getIdEdu() {
         return idEdu;
     }
@@ -45,21 +47,24 @@ public class Education {
         this.tituloEdu = tituloEdu;
     }
 
-    public Date getFechaIEdu() {
+    public int getFechaIEdu() {
         return fechaIEdu;
     }
 
-    public void setFechaIEdu(Date fechaIEdu) {
+    public void setFechaIEdu(int fechaIEdu) {
         this.fechaIEdu = fechaIEdu;
     }
 
-    public Date getFechaFEdu() {
+    public int getFechaFEdu() {
         return FechaFEdu;
     }
 
-    public void setFechaFEdu(Date FechaFEdu) {
+    public void setFechaFEdu(int FechaFEdu) {
         this.FechaFEdu = FechaFEdu;
     }
+
+    
+    
 
     public String getImagenEdu() {
         return imagenEdu;

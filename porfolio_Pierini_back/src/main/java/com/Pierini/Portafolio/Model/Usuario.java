@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,17 +30,16 @@ public class Usuario implements Serializable {
     private String fotoPerfil;
     
     @OneToMany(fetch = FetchType.LAZY, mappedBy ="idEdu")
-   
-    private List <Education> educationList; 
+   private List<Education> eduList; 
+    
     @OneToMany(fetch = FetchType.LAZY, mappedBy ="idExp")
+    private List<Experience> expList; 
    
-    private List <Experience> experinceList; 
     @OneToMany(fetch = FetchType.LAZY, mappedBy ="idProy")
-   
-    private List <Project> projectList; 
+    private List<Project> projList; 
     
     @OneToMany(fetch = FetchType.LAZY, mappedBy ="idSkill")
-    private List <Skill> skillList; 
+    private List<Skill> skillList; 
     
     public Usuario() {
     }
@@ -95,24 +93,12 @@ public class Usuario implements Serializable {
         this.fotoPerfil = fotoPerfil;
     }
 
-    public List<Education> getEducationList() {
-        return educationList;
+    public String getTittle() {
+        return tittle;
     }
 
-    public void setEducationList(List<Education> educationList) {
-        this.educationList = educationList;
-    }
-
-    public List<Experience> getExperinceList() {
-        return experinceList;
-    }
-
-    public void setExperinceList(List<Experience> experinceList) {
-        this.experinceList = experinceList;
-    }
-
-   
-
-    
+    public void setTittle(String tittle) {
+        this.tittle = tittle;
+    }  
             
 }

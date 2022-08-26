@@ -10,9 +10,9 @@ import javax.persistence.Id;
  
 @Entity
 
-public class Experience {
+public class Experience  {
   @Id @GeneratedValue(strategy=GenerationType.AUTO) 
-   private Long idEdu;
+   private Long idExp;
    private String tituloExp;
    private Date  fechaIExp;
    private Date FechaFExp;
@@ -21,20 +21,26 @@ public class Experience {
     public Experience() {
     }
 
-    public Experience(Long idEdu, String tituloExp, Date fechaIExp, Date FechaFExp) {
-        this.idEdu = idEdu;
+  
+
+    public Experience(Long idExp, String tituloExp, Date FechaFExp, String imagenExp) {
+        this.idExp = idExp;
         this.tituloExp = tituloExp;
-        this.fechaIExp = fechaIExp;
         this.FechaFExp = FechaFExp;
+        this.imagenExp = imagenExp;
     }
 
-    public Long getIdEdu() {
-        return idEdu;
+   
+
+    public Long getIdExp() {
+        return idExp;
     }
 
-    public void setIdEdu(Long idEdu) {
-        this.idEdu = idEdu;
+    public void setIdExp(Long idExp) {
+        this.idExp = idExp;
     }
+
+   
 
     public String getTituloExp() {
         return tituloExp;
