@@ -1,5 +1,5 @@
 
-package Except;
+package com.Pierini.Portafolio.Except;
 
 
 public class UserNotFound extends RuntimeException{
