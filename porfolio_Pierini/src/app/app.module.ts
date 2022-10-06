@@ -14,9 +14,6 @@ import { HSSComponent } from './components/hss/hss.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegistrerComponent } from './components/registrer/registrer.component';
-import { SiginComponent } from './components/sigin/sigin.component';
-import { ForgottenComponent } from './components/forgotten/forgotten.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -33,10 +30,7 @@ import { FormsModule } from '@angular/forms';
     HSSComponent,
     ProyectsComponent,
     FooterComponent,
-    LoginComponent,
-    RegistrerComponent,
-    SiginComponent,
-    ForgottenComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
