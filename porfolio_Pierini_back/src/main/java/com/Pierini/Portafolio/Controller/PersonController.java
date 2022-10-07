@@ -21,21 +21,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonController {
 @Autowired 
 IPersonService ipersonService;
-@GetMapping("Person/get")
+@GetMapping("/Person/get")
 public List<Person> getPerson(){
     return ipersonService.getPersons();
 }
-@PostMapping("Person/Create")
+@PostMapping("/Person/Create")
 public String createPerson(@RequestBody Person person){
     ipersonService.savePerson(person);
     return "this person is create";
 }
-@DeleteMapping("Person/delete/{id}")
+@DeleteMapping("/Person/delete/{id}")
 public String deletePerson(@PathVariable Long id){
     ipersonService.deletePerson(id);
     return "this person has been delete";
 }
-@PutMapping("Person/edit/{id}")
+@PutMapping("/Person/edit/{id}")
 public Person editPerson(@PathVariable Long id, @RequestParam ("name")String newName,
         @RequestParam ("lastName")String newLastName,
         @RequestParam ("descP")String newDescP,
