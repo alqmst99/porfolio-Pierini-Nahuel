@@ -1,4 +1,3 @@
-
 package com.Pierini.Portafolio.Entity;
 
 import java.text.spi.DateFormatProvider;
@@ -9,25 +8,30 @@ import javax.persistence.Id;
 
 /**
  *
- * @author Pieirni Nahuel Nicolas 
+ * @author Pieirni Nahuel Nicolas
  */
 @Entity
 public class Education {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-private DateFormatProvider dateI;
-private DateFormatProvider dateF;
-private String descEd;
+    private String nameE;
+    private String dateI;
+    private String dateF;
+    private String descEd;
+//Constructors
 
     public Education() {
     }
 
-    public Education(DateFormatProvider dateI, DateFormatProvider dateF, String descEd) {
+    public Education(String nameE, String dateI, String dateF, String descEd) {
+        this.nameE = nameE;
         this.dateI = dateI;
         this.dateF = dateF;
         this.descEd = descEd;
     }
+//Getters & Setters
 
     public int getId() {
         return id;
@@ -37,19 +41,27 @@ private String descEd;
         this.id = id;
     }
 
-    public DateFormatProvider getDateI() {
+    public String getNameE() {
+        return nameE;
+    }
+
+    public void setNameE(String nameE) {
+        this.nameE = nameE;
+    }
+
+    public String getDateI() {
         return dateI;
     }
 
-    public void setDateI(DateFormatProvider dateI) {
+    public void setDateI(String dateI) {
         this.dateI = dateI;
     }
 
-    public DateFormatProvider getDateF() {
+    public String getDateF() {
         return dateF;
     }
 
-    public void setDateF(DateFormatProvider dateF) {
+    public void setDateF(String dateF) {
         this.dateF = dateF;
     }
 
@@ -60,5 +72,5 @@ private String descEd;
     public void setDescEd(String descEd) {
         this.descEd = descEd;
     }
- 
+
 }
