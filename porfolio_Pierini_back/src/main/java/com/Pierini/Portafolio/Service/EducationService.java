@@ -39,6 +39,6 @@ public boolean existById(int id){
     return ieducationRepo.existsById(id);
 }
 public boolean existByNameE(String nameE){
-    return ieducationRepo.existByNameE(nameE);
+    return ieducationRepo.existsByNameE(nameE);
 }
 }

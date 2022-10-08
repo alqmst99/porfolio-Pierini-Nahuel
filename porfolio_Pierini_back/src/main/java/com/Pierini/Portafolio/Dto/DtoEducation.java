@@ -5,6 +5,8 @@
 
 package com.Pierini.Portafolio.Dto;
 
+import javax.validation.constraints.NotBlank;
+
 
 
 
@@ -13,14 +15,14 @@ package com.Pierini.Portafolio.Dto;
  * @author Pieirni Nahuel Nicolas 
  */
 public class DtoEducation {
-@Not
+@NotBlank
 
 private String nameE;
-
+@NotBlank
 private String descE;
-
+@NotBlank
 private String dateI;
-
+@NotBlank
 private String dateF;
 
     public DtoEducation() {

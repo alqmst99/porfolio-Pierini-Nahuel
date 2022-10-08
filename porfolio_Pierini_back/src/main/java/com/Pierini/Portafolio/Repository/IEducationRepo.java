@@ -11,5 +11,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface IEducationRepo extends JpaRepository<Education, Integer>{
     public Optional<Education>findByNameE(String nameE);
-    public boolean existByNameE(String nameE);
+    public boolean existsByNameE(String nameE);
 }
