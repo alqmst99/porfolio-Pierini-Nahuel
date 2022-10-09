@@ -5,7 +5,6 @@ import java.util.List;
 
 
 import java.util.stream.Collectors;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -33,7 +32,7 @@ public class UsuarioPrincipal implements UserDetails{
         this.authorities = authorities;
     }
 public static UsuarioPrincipal build (Usuario usuario){
-    List <GrantedAuthority> authorities = usuario.getRoles().stream().map(Rol -> new SimpleGrantedAuthority(rol.getRolName())).collect(Collectors.toList());
+    List <GrantedAuthority> authorities = usuario.getRoles().stream().map(rol -> new SimpleGrantedAuthority(rol.getRolName())).collect(Collectors.toList());
     return new UsuarioPrincipal(usuario.getNameUser(),usuario.getNameUser(),usuario.getEmail(),usuario.getPassword(),authorities);
 }
 
