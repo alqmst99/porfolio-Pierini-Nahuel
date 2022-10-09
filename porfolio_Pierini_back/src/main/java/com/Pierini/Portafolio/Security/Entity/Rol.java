@@ -3,13 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.Pierini.Portafolio.Segurity.Entity;
+package com.Pierini.Portafolio.Security.Entity;
 
 /**
  *
  * @author Pieirni Nahuel Nicolas 
  */
-import com.Pierini.Portafolio.Segurity.enums.RolName;
+import com.Pierini.Portafolio.Security.enums.RolName;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;

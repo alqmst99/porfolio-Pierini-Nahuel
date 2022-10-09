@@ -1,9 +1,9 @@
 
 
-package com.Pierini.Portafolio.Segurity.Service;
+package com.Pierini.Portafolio.Security.Service;
 
-import com.Pierini.Portafolio.Segurity.Entity.Usuario;
-import com.Pierini.Portafolio.Segurity.Repository.IUsuarioRepo;
+import com.Pierini.Portafolio.Security.Entity.Usuario;
+import com.Pierini.Portafolio.Security.Repository.IUsuarioRepo;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

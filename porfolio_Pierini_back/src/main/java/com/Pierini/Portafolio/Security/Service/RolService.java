@@ -1,8 +1,8 @@
-package com.Pierini.Portafolio.Segurity.Service;
+package com.Pierini.Portafolio.Security.Service;
 
-import com.Pierini.Portafolio.Segurity.Entity.Rol;
-import com.Pierini.Portafolio.Segurity.Repository.IRolRepo;
-import com.Pierini.Portafolio.Segurity.enums.RolName;
+import com.Pierini.Portafolio.Security.Entity.Rol;
+import com.Pierini.Portafolio.Security.Repository.IRolRepo;
+import com.Pierini.Portafolio.Security.enums.RolName;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
