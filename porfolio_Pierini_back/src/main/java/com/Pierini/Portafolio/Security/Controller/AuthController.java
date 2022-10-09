@@ -5,7 +5,6 @@ import com.Pierini.Portafolio.Security.JWT.JwtProvider;
 import com.Pierini.Portafolio.Security.Service.RolService;
 import com.Pierini.Portafolio.Security.Service.UsuarioService;
 import com.Pierini.Portafolio.Security.enums.RolName;
-import com.Pierini.Portafolio.Segurity.Entity.Rol;
 import com.Pierini.Portafolio.Segurity.Entity.Usuario;
 import java.util.HashSet;
 import java.util.Set;
@@ -54,7 +53,7 @@ public class AuthController {
         Set <Rol> roles= new HashSet<>();
         roles.add(rolService.getByRolName(RolName.ROLE_USER).get());
         
-        if (newUser.getRoles().contains("admin<"));
+        if (newUser.getRoles().contains("admin"));
         roles.add(rolService.getByRolName(RolName.ROLE_ADMIN).get());
         usuario.setRoles(roles);
         usuarioService.save(usuario);
