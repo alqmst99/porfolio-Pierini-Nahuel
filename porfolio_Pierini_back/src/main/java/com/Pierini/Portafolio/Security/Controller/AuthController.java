@@ -80,11 +80,11 @@ public class AuthController {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("field not maching"), HttpStatus.BAD_REQUEST);
          }
-        Authentication authentication = AuthenticationManager.authentication(new UsernamePasswordAuthenticationToken (loginUser.getNameUser(), loginUser.getPassword()));
+        Authentication authentication = authManager.authenticate (new UsernamePasswordAuthenticationToken (loginUser.getNameUser(), loginUser.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String Jwt = jwtProvider.generateToken(authentication);
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        JwtDto jwtDto = new JwtDto( userDetails.getUsername(), userDetails.getPassword());
+        JwtDto jwtDto = new JwtDto(Jwt, userDetails.getUsername(), userDetails.getPassword());
         return new ResponseEntity(jwtDto, HttpStatus.OK);
 
     }
