@@ -1,6 +1,7 @@
 package com.Pierini.Portafolio.Security.Controller;
 
 import com.Pierini.Portafolio.Controller.Mensaje;
+import com.Pierini.Portafolio.Security.Entity.Rol;
 import com.Pierini.Portafolio.Security.JWT.JwtProvider;
 import com.Pierini.Portafolio.Security.Service.RolService;
 import com.Pierini.Portafolio.Security.Service.UsuarioService;
