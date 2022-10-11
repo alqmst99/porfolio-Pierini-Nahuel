@@ -1,5 +1,3 @@
-
-
 package com.Pierini.Portafolio.Segurity.JWT;
 
 import com.Pierini.Portafolio.Segurity.Service.UserDetailImpl;
@@ -27,7 +25,7 @@ private final static Logger logger= LoggerFactory.getLogger(JwtEntryPoint.class)
 @Autowired
 JwtProvider jwtProvider;
 @Autowired
-UserDetailImpl userDetail;
+UserDetailImpl userDetailServiceImpl;
 
 @Override
 
@@ -37,12 +35,12 @@ UserDetailImpl userDetail;
        String token= getToken(request);
        if(token != null && jwtProvider.valiateToken(token)){
            String nameUser= jwtProvider.getNameUserFromToken(token);
-           UserDetails userdetails= userDetail.loadUserByUsername(token);
+           UserDetails userdetails= userDetailServiceImpl.loadUserByUsername(token);
            UsernamePasswordAuthenticationToken auth= new UsernamePasswordAuthenticationToken (userdetails, null, userdetails.getAuthorities());
 
            SecurityContextHolder.getContext().setAuthentication(auth);
        }
-    } catch (Exception e) {
+    } catch (ExceptionInInitializerError e) {
         logger.error("error method FilterInternal");
     }
     filterChain.doFilter(request, response);

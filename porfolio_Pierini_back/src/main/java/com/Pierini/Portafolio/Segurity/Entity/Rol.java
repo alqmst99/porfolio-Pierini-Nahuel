@@ -31,6 +31,7 @@ private int id;
 @Enumerated(EnumType.STRING)
 private RolName rolName;
 
+    
     public Rol() {
     }
 
@@ -38,6 +39,7 @@ private RolName rolName;
         this.rolName = rolName;
     }
 
+   
     public int getId() {
         return id;
     }
@@ -46,6 +48,7 @@ private RolName rolName;
         this.id = id;
     }
 
+  
     public RolName getRolName() {
         return rolName;
     }

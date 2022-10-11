@@ -55,12 +55,14 @@ public class AuthController {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Field poorly compose"), HttpStatus.BAD_REQUEST);
         }
-        if (usuarioService.existsByNameUser(newUser.getNameUser())) 
+        if (usuarioService.existsByNameUser(newUser.getNameUser())) {
             return new ResponseEntity(new Mensaje("This User is a ready exist"), HttpStatus.BAD_REQUEST);
-        
-        if (usuarioService.existsByEmail(newUser.getEmail())) 
+        }
+
+        if (usuarioService.existsByEmail(newUser.getEmail())) {
             return new ResponseEntity(new Mensaje("This Email is a ready exist"), HttpStatus.BAD_REQUEST);
-        
+        }
+
         Usuario usuario = new Usuario(newUser.getName(), newUser.getNameUser(), newUser.getEmail(), passwordEncoder.encode(newUser.getPassword()));
 
 //Rol
@@ -68,9 +70,10 @@ public class AuthController {
         roles.add(rolService.getByRolName(RolName.ROLE_USER).get());
 
         if (newUser.getRoles().contains("admin"));
-            roles.add(rolService.getByRolName(RolName.ROLE_ADMIN).get());
+        roles.add(rolService.getByRolName(RolName.ROLE_ADMIN).get());
         usuario.setRoles(roles);
-        usuarioService.save(usuario);        return new ResponseEntity(new Mensaje("saved user"), HttpStatus.CREATED);
+        usuarioService.save(usuario);
+        return new ResponseEntity(new Mensaje("saved user"), HttpStatus.CREATED);
     }
 
     // login
@@ -78,12 +81,12 @@ public class AuthController {
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUser loginUser, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("field not maching"), HttpStatus.BAD_REQUEST);
-         }
-        Authentication authentication = authManager.authenticate (new UsernamePasswordAuthenticationToken (loginUser.getNameUser(), loginUser.getPassword()));
+        }
+        Authentication authentication = authManager.authenticate(new UsernamePasswordAuthenticationToken(loginUser.getNameUser(), loginUser.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String Jwt = jwtProvider.generateToken(authentication);
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        JwtDto jwtDto = new JwtDto(Jwt, userDetails.getUsername(),userDetails.getAuthorities());
+        JwtDto jwtDto = new JwtDto(Jwt, userDetails.getUsername(), userDetails.getAuthorities());
         return new ResponseEntity(jwtDto, HttpStatus.OK);
 
     }
