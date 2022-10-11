@@ -1,8 +1,8 @@
 
 
-package com.Pierini.Portafolio.Security.JWT;
+package com.Pierini.Portafolio.Segurity.JWT;
 
-import com.Pierini.Portafolio.Security.Service.UserDetailImpl;
+import com.Pierini.Portafolio.Segurity.Service.UserDetailImpl;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

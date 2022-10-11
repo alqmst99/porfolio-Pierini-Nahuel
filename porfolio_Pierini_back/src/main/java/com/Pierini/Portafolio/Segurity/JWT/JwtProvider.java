@@ -1,7 +1,7 @@
-package com.Pierini.Portafolio.Security.JWT;
+package com.Pierini.Portafolio.Segurity.JWT;
 
 
-import com.Pierini.Portafolio.Security.Entity.UsuarioPrincipal;
+import com.Pierini.Portafolio.Segurity.Entity.UsuarioPrincipal;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;

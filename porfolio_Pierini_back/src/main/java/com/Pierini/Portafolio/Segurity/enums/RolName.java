@@ -1,5 +1,5 @@
 
-package com.Pierini.Portafolio.Security.enums;
+package com.Pierini.Portafolio.Segurity.enums;
 
 /**
  *

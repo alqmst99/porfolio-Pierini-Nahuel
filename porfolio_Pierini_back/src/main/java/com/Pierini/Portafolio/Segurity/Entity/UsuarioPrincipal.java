@@ -1,4 +1,4 @@
-package com.Pierini.Portafolio.Security.Entity;
+package com.Pierini.Portafolio.Segurity.Entity;
 
 import java.util.Collection;
 import java.util.List;

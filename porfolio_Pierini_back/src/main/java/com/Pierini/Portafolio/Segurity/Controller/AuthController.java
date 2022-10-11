@@ -1,14 +1,14 @@
-package com.Pierini.Portafolio.Security.Controller;
+package com.Pierini.Portafolio.Segurity.Controller;
 
 import com.Pierini.Portafolio.Controller.Mensaje;
 import com.Pierini.Portafolio.Dto.JwtDto;
 import com.Pierini.Portafolio.Dto.LoginUser;
 import com.Pierini.Portafolio.Dto.NewUser;
-import com.Pierini.Portafolio.Security.Entity.Rol;
-import com.Pierini.Portafolio.Security.JWT.JwtProvider;
-import com.Pierini.Portafolio.Security.Service.RolService;
-import com.Pierini.Portafolio.Security.Service.UsuarioService;
-import com.Pierini.Portafolio.Security.enums.RolName;
+import com.Pierini.Portafolio.Segurity.Entity.Rol;
+import com.Pierini.Portafolio.Segurity.JWT.JwtProvider;
+import com.Pierini.Portafolio.Segurity.Service.RolService;
+import com.Pierini.Portafolio.Segurity.Service.UsuarioService;
+import com.Pierini.Portafolio.Segurity.enums.RolName;
 import com.Pierini.Portafolio.Segurity.Entity.Usuario;
 import java.util.HashSet;
 import java.util.Set;
@@ -39,7 +39,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     @Autowired
-    PasswordEncoder passworEncoder;
+    PasswordEncoder passwordEncoder;
     @Autowired
     AuthenticationManager authManager;
     @Autowired
@@ -55,13 +55,13 @@ public class AuthController {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Field poorly compose"), HttpStatus.BAD_REQUEST);
         }
-        if (usuarioService.existsByNameUser(newUser.getNameUser())) {
+        if (usuarioService.existsByNameUser(newUser.getNameUser())) 
             return new ResponseEntity(new Mensaje("This User is a ready exist"), HttpStatus.BAD_REQUEST);
-        }
-        if (usuarioService.existsByEmail(newUser.getEmail())) {
+        
+        if (usuarioService.existsByEmail(newUser.getEmail())) 
             return new ResponseEntity(new Mensaje("This Email is a ready exist"), HttpStatus.BAD_REQUEST);
-        }
-        Usuario usuario = new Usuario(newUser.getName(), newUser.getNameUser(), newUser.getEmail(), PasswordEncoder(newUser.setPassword(password)));
+        
+        Usuario usuario = new Usuario(newUser.getName(), newUser.getNameUser(), newUser.getEmail(), passwordEncoder.encode(newUser.getPassword()));
 
 //Rol
         Set<Rol> roles = new HashSet<>();
@@ -70,8 +70,7 @@ public class AuthController {
         if (newUser.getRoles().contains("admin"));
             roles.add(rolService.getByRolName(RolName.ROLE_ADMIN).get());
         usuario.setRoles(roles);
-        usuarioService.save(usuario);
-        return new ResponseEntity(new Mensaje("saved user"), HttpStatus.CREATED);
+        usuarioService.save(usuario);        return new ResponseEntity(new Mensaje("saved user"), HttpStatus.CREATED);
     }
 
     // login
@@ -84,7 +83,7 @@ public class AuthController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String Jwt = jwtProvider.generateToken(authentication);
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        JwtDto jwtDto = new JwtDto(Jwt, userDetails.getUsername(), userDetails.getPassword());
+        JwtDto jwtDto = new JwtDto(Jwt, userDetails.getUsername(),userDetails.getAuthorities());
         return new ResponseEntity(jwtDto, HttpStatus.OK);
 
     }

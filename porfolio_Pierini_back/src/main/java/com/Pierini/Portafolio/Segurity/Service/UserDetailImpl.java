@@ -1,8 +1,8 @@
 
-package com.Pierini.Portafolio.Security.Service;
+package com.Pierini.Portafolio.Segurity.Service;
 
-import com.Pierini.Portafolio.Security.Entity.Usuario;
-import com.Pierini.Portafolio.Security.Entity.UsuarioPrincipal;
+import com.Pierini.Portafolio.Segurity.Entity.Usuario;
+import com.Pierini.Portafolio.Segurity.Entity.UsuarioPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
