@@ -41,9 +41,9 @@ public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
     @Autowired
-    AuthenticationManager authManager;
+    AuthenticationManager  authManager;
     @Autowired
-    UsuarioService usuarioService;
+    UsuarioService usuarioService;s
     @Autowired
     RolService rolService;
     @Autowired
@@ -82,6 +82,7 @@ public class AuthController {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("field not maching"), HttpStatus.BAD_REQUEST);
         }
+
         Authentication authentication = authManager.authenticate(new UsernamePasswordAuthenticationToken(loginUser.getNameUser(), loginUser.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String Jwt = jwtProvider.generateToken(authentication);

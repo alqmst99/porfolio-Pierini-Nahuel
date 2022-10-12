@@ -25,7 +25,7 @@ public boolean existsByNameUser(String nameUser){
     return iusuarioRepo.existsByNameUser(nameUser);
 }
 public boolean existsByEmail(String email){
-    return iusuarioRepo.existByEmail(email);
+    return iusuarioRepo.existsByEmail(email);
 }
 public void save(Usuario usuario){
   iusuarioRepo.save(usuario);
