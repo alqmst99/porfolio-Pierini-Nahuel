@@ -3,7 +3,6 @@ package com.Pierini.Portafolio.Segurity.Service;
 import com.Pierini.Portafolio.Segurity.Entity.Rol;
 import com.Pierini.Portafolio.Segurity.Repository.IRolRepo;
 import com.Pierini.Portafolio.Segurity.enums.RolName;
-
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

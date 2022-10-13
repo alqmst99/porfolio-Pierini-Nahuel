@@ -21,11 +21,11 @@ public class Person {
     private Long id;
     @NotNull
     
-    private String Name;
+    private String name;
     @NotNull
-    private String LastName;
+    private String lastName;
     @NotNull
-    private String DescP;
+    private String descP;
     @NotNull
     private String imgP;
 
