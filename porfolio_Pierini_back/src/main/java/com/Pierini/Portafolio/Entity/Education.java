@@ -9,6 +9,7 @@ import javax.persistence.Id;
 /**
  *
  * @author Pieirni Nahuel Nicolas
+ * @email nahuel.pierini90@hotmail.com
  */
 @Entity
 public class Education {

@@ -21,35 +21,62 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Pieirni Nahuel Nicolas
  */
 @RestController
-@RequestMapping("/Education")
+@RequestMapping("Education")
 @CrossOrigin(origins = "http://localhost:4200")
 public class EduactionController {
 
     @Autowired
-    EducationService eduserv;
+    EducationService eduServ;
 
     @GetMapping("/list")
     public ResponseEntity<List<Education>> list() {
-        List<Education> list = eduserv.list();
+        List<Education> list = eduServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-
+@GetMapping("/detail/{id}")
+    public ResponseEntity<Education> getById(@PathVariable("id") int id){
+        if(!eduServ.existsById(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+       Education edu = eduServ.getOne(id).get();
+        return new ResponseEntity(edu, HttpStatus.OK);
+    }
     //create education
     public ResponseEntity<?> create(@RequestBody DtoEducation dtoEdu) {
         if (StringUtils.isBlank(dtoEdu.getNameE())) 
             return new ResponseEntity(new Mensaje("the name is obligatory"), HttpStatus.BAD_REQUEST);
         
 
-        if (eduserv.existByNameE(dtoEdu.getNameE())) 
-            return new ResponseEntity(new Mensaje("the education i a ready exist"), HttpStatus.BAD_REQUEST);
+        if (eduServ.existsByNameE(dtoEdu.getNameE())) 
+            return new ResponseEntity(new Mensaje("the education is a ready exist"), HttpStatus.BAD_REQUEST);
 
             Education education = new Education(dtoEdu.getNameE(), dtoEdu.getDescE(), dtoEdu.getDateI(), dtoEdu.getDateF());
-            eduserv.save(education);
-            return new ResponseEntity(new Mensaje("education add's"), HttpStatus.OK);
+            eduServ.save(education);
+            return new ResponseEntity(new Mensaje("Education hab bean add"), HttpStatus.OK);
 
         }
     //Update Education
- 
-  
-
+ @PutMapping("/update")
+  public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoEducation dtoEdu){
+      //validations
+      //exist id?
+      if (!eduServ.existsById(id))
+          return new ResponseEntity(new Mensaje("the id no exist"),HttpStatus.BAD_REQUEST); 
+      if (!eduServ.existsByNameE(dtoEdu.getNameE())&& eduServ.getByNameE(dtoEdu.getNameE()).get().getId() != id)
+           return new ResponseEntity (new Mensaje("the education i a ready exists"),HttpStatus.BAD_REQUEST);
+      Education edu= eduServ.getOne(id).get();
+      edu.setNameE(dtoEdu.getNameE());
+      edu.setDescEd(dtoEdu.getDescE());
+      edu.setDateI(dtoEdu.getDateI());
+      edu.setDateF(dtoEdu.getDateF());
+      eduServ.save(edu);
+      return new ResponseEntity(new Mensaje("Education had bean update"),HttpStatus.OK);
+ }
+    //Delete Education 
+  public ResponseEntity<?> delete(@PathVariable("id") int id){
+      //validations
+      if(!eduServ.existsById(id))
+          return new ResponseEntity(new Mensaje("the id don't exist"),HttpStatus.BAD_REQUEST);
+      eduServ.delete(id);
+      return new ResponseEntity(new Mensaje("the Education hab bean delete"), HttpStatus.OK);
+  }
     }

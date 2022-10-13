@@ -35,10 +35,10 @@ public void save(Education edu){
 public void delete(int id){
     ieducationRepo.deleteById(id);
 }
-public boolean existById(int id){
+public boolean existsById(int id){
     return ieducationRepo.existsById(id);
 }
-public boolean existByNameE(String nameE){
+public boolean existsByNameE(String nameE){
     return ieducationRepo.existsByNameE(nameE);
 }
 }
