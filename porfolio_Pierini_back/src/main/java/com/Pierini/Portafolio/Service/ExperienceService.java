@@ -40,7 +40,7 @@ public boolean existsById(int id){
     return expRepo.existsById(id);
 }
 public boolean existsByNameE(String nameE){
-    return expRepo.ExistsbyNameE(nameE);
+    return expRepo.existsByNameE(nameE);
 }
 
 }
