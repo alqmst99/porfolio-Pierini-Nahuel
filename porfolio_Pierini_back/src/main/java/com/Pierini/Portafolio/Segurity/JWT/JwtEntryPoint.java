@@ -30,7 +30,7 @@ private String expiration;
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
           logger.error("fallo el metodo commence");
-          response.sendError(HttpServletResponse.SC_UNAUTHORIZED,"no authoryzated");
+          response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
     }
     
 }

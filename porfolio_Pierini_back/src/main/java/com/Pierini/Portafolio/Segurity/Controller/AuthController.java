@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Pieirni Nahuel Nicolas
  */
 @RestController
-@RequestMapping("/Auth")
+@RequestMapping("/auth")
 @CrossOrigin
 public class AuthController {
 
@@ -77,7 +77,7 @@ public class AuthController {
     }
 
     // login
-    @PostMapping("/Login")
+    @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUser loginUser, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("field not maching"), HttpStatus.BAD_REQUEST);

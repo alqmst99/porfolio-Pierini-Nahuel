@@ -1,31 +1,8 @@
-.row{
-    padding: 20px;
-    background: #341066;
-    color: #ffffff;
-    margin: 0px;
-    text-align: center;
-    align-items: center;
-    
+h3 {
+    color: #563298;
+    font-size: xx-large;
 }
-.container{
-width: auto;
-border: 5px solid #000;
-border-radius: 10px;
-box-shadow:10px 10px 10px black ;
+p{
+    color: yellow;
 }
-.text-pr, .img-pr{
-    display: inline-block;
-    text-align: justify;
-}
-.img-pr1{
-    box-shadow: 10px 10px 10px black;
-    display: inline-block;
-}
-button{
-   
-    border-radius:50%;
-    background: #341066;
-
-
- 
-}
+  
