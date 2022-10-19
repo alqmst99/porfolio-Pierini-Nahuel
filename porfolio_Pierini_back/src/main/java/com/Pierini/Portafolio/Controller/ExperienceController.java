@@ -30,12 +30,12 @@ public class ExperienceController  {
     ExperienceService expServ;
     
     //lista
-    @GetMapping("/lista")
+    @GetMapping("lista")
     public ResponseEntity<List<Experience>>list(){
         List <Experience> list =expServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-    @GetMapping("/detail/{id}")
+    @GetMapping("detail/{id}")
    
            
     public ResponseEntity<Experience> getById(@PathVariable("id") int id){
@@ -57,7 +57,7 @@ public class ExperienceController  {
         return new ResponseEntity(new Mensaje("Experience hab bean created"),HttpStatus.OK);
     }
     //update
-    @PutMapping("/update")
+    @PutMapping("update")
     public ResponseEntity<?> update(@PathVariable ("id")int id, @RequestBody DtoExperience dtoExp){
         //validations
         if(!expServ.existsById(id))

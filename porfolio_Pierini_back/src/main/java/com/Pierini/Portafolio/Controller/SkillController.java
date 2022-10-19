@@ -28,12 +28,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class SkillController {
     @Autowired
     SkillService skillS;
-     @GetMapping("/lista")
+     @GetMapping("lista")
     public ResponseEntity<List<Skill>>list(){
         List <Skill> list =skillS.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-    @GetMapping("/detail/{id}")
+    @GetMapping("detail/{id}")
    
            
     public ResponseEntity<Skill> getById(@PathVariable("id") int id){
@@ -55,7 +55,7 @@ public class SkillController {
         return new ResponseEntity(new Mensaje("skill hab bean created"),HttpStatus.OK);
     }
     //update
-    @PutMapping("/update")
+    @PutMapping("update")
     public ResponseEntity<?> update(@PathVariable ("id")int id, @RequestBody DtoSkill dtoS){
         //validations
         if(!skillS.existsById(id))

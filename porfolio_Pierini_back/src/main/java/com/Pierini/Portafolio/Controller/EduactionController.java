@@ -28,12 +28,12 @@ public class EduactionController {
     @Autowired
     EducationService eduServ;
 
-    @GetMapping("/list")
+    @GetMapping("list")
     public ResponseEntity<List<Education>> list() {
         List<Education> list = eduServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-@GetMapping("/detail/{id}")
+@GetMapping("detail/{id}")
     public ResponseEntity<Education> getById(@PathVariable("id") int id){
         if(!eduServ.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
@@ -55,7 +55,7 @@ public class EduactionController {
 
         }
     //Update Education
- @PutMapping("/update")
+ @PutMapping("update")
   public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoEducation dtoEdu){
       //validations
       //exist id?
