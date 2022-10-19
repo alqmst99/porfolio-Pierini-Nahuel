@@ -19,6 +19,8 @@ nameUser !: string;
 password!: string;
 roles: string[] = [];
 errMsj!: string;
+  router: any;
+
 constructor(private tokenService: TokenService, private authService: AuthService, router: Router) { }
 
 ngOnInit(): void {
@@ -36,7 +38,7 @@ onLogin(): void {
     this.tokenService.setToken(data.token);
     this.tokenService.setAuthorities(data.authorities);
     this.roles = data.authorities;
-    
+    this.router.navigate(['']);
   }, err => {
     this.isLogged = false;
     this.isLogginFail = true;
