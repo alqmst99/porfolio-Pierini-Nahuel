@@ -10,6 +10,6 @@ export class PersonService {
 URL = 'http://localhost:8080/person/'
   constructor(private http: HttpClient) {}
     public getPerson(): Observable<Person>{
-    return this.http.get<Person>(this.URL + 'traer/perfil');
+    return this.http.get<Person>(this.URL + '/list');
    }
 }

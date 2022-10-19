@@ -3,7 +3,7 @@ package com.Pierini.Portafolio.Segurity.Entity;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,7 +27,7 @@ public class Usuario {
     @NotNull
     private String name;
 
-       @NotNull
+    @NotNull
     @Column(unique = true)
     private String nameUser;
     @NotNull
@@ -38,9 +38,6 @@ public class Usuario {
     @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Rol> roles = new HashSet<>();
 
-    /**
-     *
-     */
     public Usuario() {
     }
 
@@ -51,7 +48,6 @@ public class Usuario {
         this.password = password;
     }
 
-  
     public int getId() {
         return id;
     }
@@ -60,18 +56,18 @@ public class Usuario {
         this.id = id;
     }
 
-   public String getName() {
+    public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
+
     public String getNameUser() {
         return nameUser;
     }
 
-  
     public void setNameUser(String nameUser) {
         this.nameUser = nameUser;
     }
@@ -80,12 +76,10 @@ public class Usuario {
         return email;
     }
 
-   
     public void setEmail(String email) {
         this.email = email;
     }
 
-   
     public String getPassword() {
         return password;
     }
@@ -94,7 +88,6 @@ public class Usuario {
         this.password = password;
     }
 
-   
     public Set<Rol> getRoles() {
         return roles;
     }

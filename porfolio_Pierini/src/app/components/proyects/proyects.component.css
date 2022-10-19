@@ -1,8 +1,12 @@
 h3 {
     color: #563298;
-    font-size: xx-large;
+    font-size: xxx-large;
 }
 p{
     color: yellow;
 }
   
+.row{
+   
+    border: solid 5px #563298 ;
+}

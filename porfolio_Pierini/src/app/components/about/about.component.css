@@ -1,6 +1,6 @@
 .row{
     padding: 15px;
-    
+   
         
 }
 #about-name{
@@ -10,7 +10,7 @@ div{
     
     background: #341066;
     color: #ffffff;
-    margin: 0px;
+   
     text-align: center;
     align-items: center;
 }
@@ -28,3 +28,4 @@ button{
 
  
 }
+
