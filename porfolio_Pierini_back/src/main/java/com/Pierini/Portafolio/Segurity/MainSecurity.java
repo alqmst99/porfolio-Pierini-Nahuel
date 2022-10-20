@@ -52,11 +52,12 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
+    @Bean
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
-       return super.authenticationManager();
+        return super.authenticationManager();
     }
-    @Bean
+
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();

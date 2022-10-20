@@ -39,11 +39,12 @@ onLogin(): void {
     this.tokenService.setAuthorities(data.authorities);
     this.roles = data.authorities;
     this.router.navigate(['']);
-  }, Error  => {
+  }, Err  => {
     this.isLogged = false;
     this.isLogginFail = true;
-    this.errMsj = Error.error.mensaje;
+    this.errMsj = Err.error.mensaje;
     console.log(this.errMsj);
+    this.router.navigate(['']);
       })
     
     }

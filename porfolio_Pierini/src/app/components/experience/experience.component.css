@@ -1,24 +1,24 @@
-.row{
-    
+.row {
     background: #341066;
     color: #ffffff;
-   
     text-align: center;
     align-items: center;
-   
+
 }
 
-ul{
+ul {
     width: auto;
     border: 5px solid #000;
     border-radius: 10px;
-    box-shadow:10px 10px 10px black ;
+    box-shadow: 10px 10px 10px black;
 }
-h2, h3{
+
+h2,
+h3 {
     display: inline;
 }
-button{
-   
-    border-radius:50%;
-    background: #341066;
+
+button {
+    background: transparent;
+    border: transparent;
 }

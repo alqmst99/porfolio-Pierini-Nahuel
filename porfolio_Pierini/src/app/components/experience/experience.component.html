@@ -2,40 +2,24 @@
     <H1>Experiencia Laboral</H1>
     <div class="col-lg-8"></div>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-    <button id="button-add-about" class="button-add-about "> <img src="assets/add.ico" alt=""> </button>
-    <button id="button-erase-about" onclick="mostrar()"> <img src="assets/del.ico" alt=""></button>
-</div>
-<div class="col-lg-1 "></div>
+
+        <button id="button-add-about" type="button" class="button-add" routerLink="/newExperience"> <img
+                src="assets/add.ico" alt=""> </button>
+
+    </div>
+    <div class="col-lg-1 "></div>
     <div class="col-lg-11">
-        <ul class="">
+        <ul class="experience" *ngFor="let Experience of exp">
+            <button id="button-edit" class="button-edit " routerLink="/editExperience/{{Experience.id}} "> <img
+                    src="assets/edit.ico" alt=""> </button>
+            <button id="button-erase" (click)="delete(Experience.id)"> <img src="assets/del.ico" alt=""></button>
             <li>
-                <h2>trabajo 1</h2><h3>(years)</h3>
-                
+                <h2>{{Experience.nameE}}</h2>
+                <h3>{{Experience.dateI}}-{{Experience.dateF}} </h3>
+
             </li>
-            <p><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Ullam molestiae eum aperiam exercitationem repellendus eligendi ipsum totam 
-                officia, a, deleniti, dignissimos quia distinctio ea temporibus. 
-                Veritatis molestias odit rerum unde?</b></p>
+            <p><b>{{Experience.descE}} </b></p>
         </ul>
-        <ul class="">
-            <li>
-                <h2>trabajo 2</h2><h3>(years)</h3>
-                
-            </li>
-            <p><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Ullam molestiae eum aperiam exercitationem repellendus eligendi ipsum totam 
-                officia, a, deleniti, dignissimos quia distinctio ea temporibus. 
-                Veritatis molestias odit rerum unde?</b></p>
-        </ul>
-        <ul class="">
-            <li>
-                <h2>trabajo 3</h2><h3>(years)</h3>
-                
-            </li>
-            <p><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Ullam molestiae eum aperiam exercitationem repellendus eligendi ipsum totam 
-                officia, a, deleniti, dignissimos quia distinctio ea temporibus. 
-                Veritatis molestias odit rerum unde?</b></p>
-        </ul>
+
     </div>
 </div>

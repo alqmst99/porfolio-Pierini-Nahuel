@@ -32,7 +32,7 @@ UserDetailImpl userDetailServiceImpl;
     try {
        String token= getToken(request);
        if(token != null && jwtProvider.valiateToken(token)){
-           String nameUser= jwtProvider.getNameUserFromToken(token);
+           String userName = jwtProvider.getNameUserFromToken(token);
            UserDetails userdetails= userDetailServiceImpl.loadUserByUsername(token);
            UsernamePasswordAuthenticationToken auth= new UsernamePasswordAuthenticationToken (userdetails, null, userdetails.getAuthorities());
 

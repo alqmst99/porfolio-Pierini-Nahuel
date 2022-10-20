@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { NewExperienceComponent } from './components/experience/new-experience.component';
+import { EditExperienceComponent } from './components/experience/edit-experience.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { HomeComponent } from './components/home/home.component';
     ProyectsComponent,
     FooterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NewExperienceComponent,
+    EditExperienceComponent
   ],
   imports: [
     BrowserModule,

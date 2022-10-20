@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienceServiceService } from 'src/app/service/experience-service.service';
+import { Experience } from 'src/app/model/experience';
+import { ExperienceService } from 'src/app/service/experience.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -8,9 +9,10 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-exp: ExperienceComponent[]=[];
 
-  constructor(expService: ExperienceServiceService, private tokenService: TokenService) { }
+exp : Experience[]= [];
+
+  constructor(private expService : ExperienceService, private tokenService: TokenService) { }
  
   isLogged =false;
   ngOnInit(): void {
@@ -21,7 +23,16 @@ exp: ExperienceComponent[]=[];
       }
     }
 chargeExp():void{
-    this.expService.list().subscribe(data =>{this.exp=data} )
+  this.expService.list().subscribe(data => { this.exp =data;})
   }
-
+ delete(id? : number ){
+  if(id != undefined){
+  this.expService.delete(id).subscribe(
+    data => {
+      this.chargeExp();
+  }, err =>{
+    alert("can't delete experience");
+  }
+  )}
+ }
 }

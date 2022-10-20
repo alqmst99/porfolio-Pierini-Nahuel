@@ -20,12 +20,8 @@ div{
     width: 100%;
 
 }
-button{
-   
-    border-radius:50%;
-    background: #341066;
-
-
- 
+button {
+    background: transparent;
+    border: transparent;
 }
 
