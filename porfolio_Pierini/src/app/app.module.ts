@@ -22,6 +22,7 @@ import { NewEducationComponent } from './components/education/new-education.comp
 import { EditEducationComponent } from './components/education/edit-education.component';
 import { NewHysComponent } from './components/hys/new-hys.component';
 import { EditHysComponent } from './components/hys/edit-hys.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { EditHysComponent } from './components/hys/edit-hys.component';
     NewEducationComponent,
     EditEducationComponent,
     NewHysComponent,
-    EditHysComponent
+    EditHysComponent,
+   
   ],
   imports: [
     BrowserModule,

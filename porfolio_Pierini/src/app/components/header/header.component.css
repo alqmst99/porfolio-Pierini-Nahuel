@@ -1,27 +1,39 @@
-
-div{
+div {
     background: #341066;
-    
+
 }
-#banner{
+
+#banner {
     width: 100%;
-    height: 500px;
+    height: 100%;
     background: #341066;
+    margin-top: 0;
 }
-img{
-   
-    width: 50px;
 
-    margin-top: 15px;
-    margin-right: 15px;
- 
+img {
+    width: 10%;
+    margin-top: 10%;
+    
+    }
+    .social{
+       align-items: flex-end;
+    }
+
+
+
+button {
+    position: absolute;
+    right: 0;
+    bottom: 90% !important;
+    
+
+}
+.fluid{
+    display:inline-block;
+    margin: 10px;
+    align-content: center;
+  
     
 }
-button{
-    width: 150px;
-    height: 25;
-    
-    
-    margin-top:25px ;
-    margin-left: 50%;
-}
+
+   
