@@ -1,42 +1,25 @@
 <div class="row">
+   
     <H1>Formación</H1>
     <div class="col-lg-8"></div>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <button id="button-add-about" class="button-add-about "> <img src="assets/add.ico" alt=""> </button>
-        <button id="button-erase-about" onclick="mostrar()"> <img src="assets/del.ico" alt=""></button>
+        <button id="button-add-about" class="button-add-about" routerLink="/newEducation"> <img src="assets/add.ico" alt=""> </button>
+       
     </div>
     
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul class="">
+        
+        <ul class="" *ngFor="let education of edu">
             <li>
-                <h2>escuela primaria</h2><h3>(years)</h3>
+                <h2>{{education.nameE}}</h2>
+                <h3>{{education.dateI}}-{{education.dateF}} </h3>
                 
             </li>
-            <p><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Ullam molestiae eum aperiam exercitationem repellendus eligendi ipsum totam 
-                officia, a, deleniti, dignissimos quia distinctio ea temporibus. 
-                Veritatis molestias odit rerum unde?</b></p>
+            <p><b>{{education.descEd}} </b></p>
+                <button id="button-edit" class="button-edit " routerLink="/editEducation/{{education.id}} "> <img src="assets/edit.ico" alt=""> </button>
+        <button id="button-erase-about" (click)="delete(education.id)"> <img src="assets/del.ico" alt=""></button>
         </ul>
-        <ul class="">
-            <li>
-                <h2>escuela secundaria</h2><h3>(years)</h3>
-                
-            </li>
-            <p><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Ullam molestiae eum aperiam exercitationem repellendus eligendi ipsum totam 
-                officia, a, deleniti, dignissimos quia distinctio ea temporibus. 
-                Veritatis molestias odit rerum unde?</b></p>
-        </ul>
-        <ul class="">
-            <li>
-                <h2>tuniversidad</h2><h3>(years)</h3>
-                
-            </li>
-            <p><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Ullam molestiae eum aperiam exercitationem repellendus eligendi ipsum totam 
-                officia, a, deleniti, dignissimos quia distinctio ea temporibus. 
-                Veritatis molestias odit rerum unde?</b></p>
-        </ul>
+       
     </div>
 </div>

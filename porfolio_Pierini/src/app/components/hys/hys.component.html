@@ -1,0 +1,28 @@
+<div class="row">
+  <h1>Hart & Soft Skill</h1>
+  <div class="col-lg-8"></div>
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <button id="button-add-about" type="button" class="button-add" routerLink="/newSkill"> <img
+      src="assets/add.ico" alt=""> </button>
+     </div>
+  <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of Skill">
+    <circle-progress 
+    [percent]="skill.porcent" 
+    [radius]="50" 
+    [title]="'skill.name'" 
+    [showUnits]="false" 
+    [outerStrokeWidth]="10"
+    [innerStrokeWidth]="3"
+    [outerStrokeColor]="'#ee9900'" 
+    [innerStrokeColor]="'#C7E596'" 
+    [animation]="true"
+    [animationDuration]="500"></circle-progress>
+    <button id="button-edit" class="button-edit " routerLink="/editSkill/{{skill.id}}"> <img src="assets/add.ico" alt=""> </button>
+    <button id="button-erase" (click)="delete(skill.id)"> <img src="assets/del.ico" alt=""></button>
+  </div>
+
+</div>
+
+
+
+ 

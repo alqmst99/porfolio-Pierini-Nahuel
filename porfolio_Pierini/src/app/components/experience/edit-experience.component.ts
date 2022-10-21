@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experience } from 'src/app/model/experience';
+import { Hys } from 'src/app/model/hys';
 import { ExperienceService } from 'src/app/service/experience.service';
 
 @Component({

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HSSComponent } from './hss.component';
+import { HYSComponent } from './hys.component';
 
-describe('HSSComponent', () => {
-  let component: HSSComponent;
-  let fixture: ComponentFixture<HSSComponent>;
+describe('HYSComponent', () => {
+  let component: HYSComponent;
+  let fixture: ComponentFixture<HYSComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HSSComponent ]
+      declarations: [ HYSComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HSSComponent);
+    fixture = TestBed.createComponent(HYSComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

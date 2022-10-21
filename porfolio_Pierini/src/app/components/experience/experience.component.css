@@ -1,9 +1,7 @@
 .row {
     background: #341066;
     color: #ffffff;
-    text-align: center;
-    align-items: center;
-
+ 
 }
 
 ul {
@@ -21,4 +19,7 @@ h3 {
 button {
     background: transparent;
     border: transparent;
+}
+h1{
+    text-align: center;
 }

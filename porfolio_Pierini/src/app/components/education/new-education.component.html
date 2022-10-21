@@ -1,8 +1,8 @@
-<div class="row " style="background: #672067; " >
+<div class="row " style="background: #672067;" >
     <div class="container col-6" style="border: 5px solid #000000 ; border-radius: 10px;">
 <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
     <div class="form-outline ">
-        <label class="form-label" for="nameE">Nombre de la Empresa</label>
+        <label class="form-label" for="nameE">institucion</label>
         <input type="text" id="nameE" class="form-control" name="nameE" [(ngModel)]="nameE" required />
         
       </div>
@@ -19,8 +19,8 @@
         
       </div>
       <div class="form-outline">
-        <label class="form-label" for="descE">Ocupacion</label>
-        <input type="text" id="descE" class="form-control" name="descE" [(ngModel)]="descE" required/>
+        <label class="form-label" for="descEd">Titulo</label>
+        <input type="text" id="descEd" class="form-control" name="descE" [(ngModel)]="descEd" required/>
         
       </div>
       <button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>

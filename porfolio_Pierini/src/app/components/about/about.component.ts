@@ -14,7 +14,7 @@ person: Person=new Person("", "","","");
   constructor( public personService: PersonService) { }
 
   ngOnInit(): void {
-    this.personService.getPerson().subscribe(data => {this.person =data})
+  
   }
 
 }

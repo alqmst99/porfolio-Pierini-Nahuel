@@ -8,8 +8,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { HSSComponent } from './components/hss/hss.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
+import { HYSComponent } from './components/hys/hys.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,23 +18,29 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { NewExperienceComponent } from './components/experience/new-experience.component';
 import { EditExperienceComponent } from './components/experience/edit-experience.component';
+import { NewEducationComponent } from './components/education/new-education.component';
+import { EditEducationComponent } from './components/education/edit-education.component';
+import { NewHysComponent } from './components/hys/new-hys.component';
+import { EditHysComponent } from './components/hys/edit-hys.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LogoAPComponent,
-
-
     AboutComponent,
     ExperienceComponent,
     EducationComponent,
-    HSSComponent,
+    HYSComponent,
     ProyectsComponent,
     FooterComponent,
     LoginComponent,
     HomeComponent,
     NewExperienceComponent,
-    EditExperienceComponent
+    EditExperienceComponent,
+    NewEducationComponent,
+    EditEducationComponent,
+    NewHysComponent,
+    EditHysComponent
   ],
   imports: [
     BrowserModule,
