@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/Person")
-@CrossOrigin (origins = "http://localhost:4200")
+@RequestMapping("/person")
+@CrossOrigin (origins = "http://localhost:4200/")
 public class PersonController {
 @Autowired 
 ImpPersonService personService;

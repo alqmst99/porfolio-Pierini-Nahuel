@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin (origins = "http://localhost:4200")
+@CrossOrigin (origins = "http://localhost:4200/")
 public class AuthController {
 
     @Autowired
@@ -49,9 +49,9 @@ public class AuthController {
     @Autowired
     JwtProvider jwtProvider;
 
-    @PostMapping("/new")
+    @PostMapping("/create")
     //new user
-    public ResponseEntity<?> nuevo(@Valid @RequestBody NewUser newUser, BindingResult bindingResult) {
+    public ResponseEntity<?> create(@Valid @RequestBody NewUser newUser, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Field poorly compose"), HttpStatus.BAD_REQUEST);
         }

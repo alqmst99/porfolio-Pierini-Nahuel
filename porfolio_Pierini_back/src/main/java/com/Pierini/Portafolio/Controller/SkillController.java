@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  *@email nahuel.pierini90@hotmail.com
  */
 @RestController
-@CrossOrigin (origins = "http://localhost:4200")
+@CrossOrigin (origins = "http://localhost:4200/")
 @RequestMapping("/Skills")
 public class SkillController {
     @Autowired
