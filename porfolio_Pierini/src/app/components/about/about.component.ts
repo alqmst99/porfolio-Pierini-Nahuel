@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 
 export class AboutComponent implements OnInit {
-person: Person=null;
+person: Person= null;
   constructor( public personService: PersonService, private tokenService: TokenService) { }
 isLogged=false;
   ngOnInit(): void {

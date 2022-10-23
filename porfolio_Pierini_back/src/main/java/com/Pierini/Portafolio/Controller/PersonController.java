@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,7 +34,8 @@ ImpPersonService personService;
         List<Person> list = personService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-@GetMapping("/detail/{id}")
+   
+      @GetMapping("/detail/{id}")
     public ResponseEntity<Person> getById(@PathVariable("id") int id){
         if(!personService.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
@@ -56,6 +58,7 @@ ImpPersonService personService;
 
         }*/
     //Update Person
+    @PreAuthorize ("hasRole('ADMIN')")
  @PutMapping("/update")
   public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPerson dtoPerson){
       //validations

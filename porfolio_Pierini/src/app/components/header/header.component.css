@@ -1,5 +1,5 @@
-div {
-    background: #341066;
+.row {
+    background: radial-gradient(circle, rgba(0,12,140,1) 0%, rgba(77,0,149,1) 35%, rgba(161,17,196,1) 100%);
 
 }
 
@@ -12,6 +12,7 @@ div {
 
 img {
     width: 15%;
+    background: transparent;
  
     
     }
@@ -30,6 +31,7 @@ button {
     display:inline-block;
     margin: 10px;
     align-content: center;
+    background: transparent;
   
     
 }

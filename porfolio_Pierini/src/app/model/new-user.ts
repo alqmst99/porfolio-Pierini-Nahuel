@@ -3,6 +3,6 @@ export class NewUser {
     nameUser: string;
     email: string;
     password:string;
-    authorities!: [];
+    authorities: [];
 
 }

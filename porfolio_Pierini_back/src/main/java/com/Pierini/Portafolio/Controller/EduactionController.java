@@ -8,9 +8,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +36,7 @@ public class EduactionController {
         List<Education> list = eduServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
+    
 @GetMapping("/detail/{id}")
     public ResponseEntity<Education> getById(@PathVariable("id") int id){
         if(!eduServ.existsById(id))
@@ -41,6 +45,8 @@ public class EduactionController {
         return new ResponseEntity(edu, HttpStatus.OK);
     }
     //create education
+    @PreAuthorize ("hasRole('ADMIN')")
+    @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoEducation dtoEdu) {
         if (StringUtils.isBlank(dtoEdu.getNameE())) 
             return new ResponseEntity(new Mensaje("the name is obligatory"), HttpStatus.BAD_REQUEST);
@@ -55,7 +61,8 @@ public class EduactionController {
 
         }
     //Update Education
- @PutMapping("/update")
+    @PreAuthorize ("hasRole('ADMIN')")
+ @PostMapping("/update")
   public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoEducation dtoEdu){
       //validations
       //exist id?
@@ -72,6 +79,8 @@ public class EduactionController {
       return new ResponseEntity(new Mensaje("Education had bean update"),HttpStatus.OK);
  }
     //Delete Education 
+  @PreAuthorize ("hasRole('ADMIN')")
+  @DeleteMapping("/delete/{id}" )
   public ResponseEntity<?> delete(@PathVariable("id") int id){
       //validations
       if(!eduServ.existsById(id))

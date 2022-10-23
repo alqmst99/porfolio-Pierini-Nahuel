@@ -1,5 +1,5 @@
 .row {
-    background: #341066;
+    background: radial-gradient(circle, rgba(0,12,140,1) 0%, rgba(77,0,149,1) 35%, rgba(161,17,196,1) 100%);
     color: #ffffff;
  
 }

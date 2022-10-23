@@ -10,15 +10,15 @@ import { PersonService } from 'src/app/service/person.service';
 })
 export class EditAboutComponent implements OnInit {
 
-  per : Person;
+  per : Person =null;
   constructor(private perService: PersonService, private activatedRouter: ActivatedRoute , private router: Router) { }
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['1'];
-    this.perService.detail(1).subscribe(data => { 
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.perService.detail(id).subscribe(data => { 
       this.per=data;
     },err =>{
-      alert("error in the modifaication");
+      alert("error in the modification");
       this.router.navigate(['']);
     } )
   }
@@ -30,6 +30,9 @@ this.perService.update(id, this.per).subscribe(data => {
   alert("error in the edition");
   this.router.navigate(['']);
 })
+}
+uploadImg($event:any){
+  
 }
 
 }

@@ -7,7 +7,7 @@ import{Observable} from 'rxjs';
 })
 export class ExperienceService {
 
-  expURL='http://localhosot:8080/experience'
+  expURL='http://localhosot:8080/experience/'
 
  
  constructor(private httpClient:HttpClient) { }

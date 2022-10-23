@@ -6,11 +6,11 @@
                 src="assets/add.ico" alt=""> </button>
     </div>
     <div class="col-lg-1 "></div>
-    <div class="col-lg-11">
-        <ul class="experience" *ngFor="let Experience of exp">
-            <button id="button-edit" class="button-edit " routerLink="/editExperience/{{Experience.id}} "> <img
+    <div class="col-lg-10">
+        <ul class="experience" *ngFor="let Experience of exp" >
+            <button id="button-edit" class="button-edit " routerLink="/editExperience/{{Experience.id}}" > <img
                     src="assets/edit.ico" alt=""> </button>
-            <button id="button-erase" (click)="delete(Experience.id)"> <img src="assets/del.ico" alt=""></button>
+            <button id="button-erase" (click)="delete(Experience.id)" > <img src="assets/del.ico" alt=""></button>
             <li>
                 <h2>{{Experience.nameE}}</h2>
                 <h3>{{Experience.dateI}}-{{Experience.dateF}} </h3>

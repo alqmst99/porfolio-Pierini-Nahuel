@@ -13,8 +13,8 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 public class UsuarioPrincipal implements UserDetails {
 
-    private String Name;
-    private String NameUser;
+    private String name;
+    private String nameUser;
     private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
@@ -23,9 +23,9 @@ public class UsuarioPrincipal implements UserDetails {
     public UsuarioPrincipal() {
     }
 
-    public UsuarioPrincipal(String Name, String NameUser, String email, String password, Collection<? extends GrantedAuthority> authorities) {
-        this.Name = Name;
-        this.NameUser = NameUser;
+    public UsuarioPrincipal(String name, String nameUser, String email, String password, Collection<? extends GrantedAuthority> authorities) {
+        this.name = name;
+        this.nameUser = nameUser;
         this.email = email;
         this.password = password;
         this.authorities = authorities;
@@ -52,13 +52,10 @@ public class UsuarioPrincipal implements UserDetails {
    
     @Override
     public String getUsername() {
-        return NameUser;
+        return nameUser;
     }
 
-    /**
-     *
-     * @return
-     */
+    
     @Override
     public boolean isAccountNonExpired() {
         return true;

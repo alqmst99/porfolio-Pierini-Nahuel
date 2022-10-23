@@ -9,9 +9,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @CrossOrigin (origins = "http://localhost:4200/")
-@RequestMapping("/Skills")
+@RequestMapping("/skill")
 public class SkillController {
     @Autowired
     SkillService skillS;
@@ -44,17 +47,20 @@ public class SkillController {
     }
     
     //create Experience
+    @PreAuthorize ("hasRole('ADMIN')")
+    @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoSkill dtoS){
         //validations
         if (StringUtils.isBlank(dtoS.getName()))
             return new ResponseEntity(new Mensaje("this field in obligatory"),HttpStatus.BAD_REQUEST);
         if (skillS.existsByName(dtoS.getName()))
             return new ResponseEntity(new Mensaje("this experience i a ready exists"),HttpStatus.BAD_REQUEST);
-        Skill skill= new Skill(dtoS.getName(), dtoS.getPercent());
+        Skill skill= new Skill(dtoS.getName(), dtoS.getPorcent());
         skillS.save(skill);
         return new ResponseEntity(new Mensaje("skill hab bean created"),HttpStatus.OK);
     }
     //update
+    @PreAuthorize ("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<?> update(@PathVariable ("id")int id, @RequestBody DtoSkill dtoS){
         //validations
@@ -68,11 +74,13 @@ public class SkillController {
             return new ResponseEntity(new Mensaje("this field in obligatory"),HttpStatus.BAD_REQUEST);
         Skill skill = skillS.getOne(id).get();
         skill.setName(dtoS.getName());
-        skill.setPercent(dtoS.getPercent());
+        skill.setPorcent(dtoS.getPorcent());
         skillS.save(skill);
         return new ResponseEntity(new Mensaje("Skill hab bean update"),HttpStatus.OK);
     }
     //delete experience
+    @PreAuthorize ("hasRole('ADMIN')")
+    @DeleteMapping("/delete/{id}" )
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         //validations
         if(!skillS.existsById(id))

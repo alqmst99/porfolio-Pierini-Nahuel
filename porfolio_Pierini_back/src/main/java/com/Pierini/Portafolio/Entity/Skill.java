@@ -17,7 +17,7 @@ public class Skill {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id ;
 private String name;
-private int percent;
+private int porcent;
 //constructors
 
     public Skill() {
@@ -25,7 +25,7 @@ private int percent;
 
     public Skill(String name, int percent) {
         this.name = name;
-        this.percent = percent;
+        this.porcent = percent;
     }
 //Getters & Setters
 
@@ -45,12 +45,12 @@ private int percent;
         this.name = name;
     }
 
-    public int getPercent() {
-        return percent;
+    public int getPorcent() {
+        return porcent;
     }
 
-    public void setPercent(int percent) {
-        this.percent = percent;
+    public void setPorcent(int porcent) {
+        this.porcent = porcent;
     }
     
 }

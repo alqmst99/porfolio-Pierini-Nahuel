@@ -55,7 +55,7 @@ public class AuthController {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Field poorly compose"), HttpStatus.BAD_REQUEST);
         }
-        if (usuarioService.existsByNameUser(newUser.getNameUser())) {
+        if (usuarioService.existsByUser(newUser.getNameUser())) {
             return new ResponseEntity(new Mensaje("This User is a ready exist"), HttpStatus.BAD_REQUEST);
         }
 

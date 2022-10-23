@@ -1,16 +1,16 @@
 
-    <div class="row">
-     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img [src]="person.imgP" class="img-fluid">
+    <div class="row" >
+     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" >
+        <img src={{person.imgP}} class="img-fluid">
      </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="about-name">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="name lastName"  >
         <p><b> {{person.name}} {{person.lastName}} </b></p>
         <p><b>Full Stack Developer Jr.</b></p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <span><b>Acerca de mi</b></span>
         <p>{{person.descP}} </p>
-        <button id="button-edit" class="button-edit-about " routerLink="/editAbout/" > <img src="assets/edit.ico" alt=""> </button>
+        <button id="button-edit" class="button-edit-about " routerLink="/editAbout/1" > <img src="assets/edit.ico" alt=""> </button>
         <form action="text">
             <input type="text" name="sobre mi" id="about-text" style="display: none;">
         </form>

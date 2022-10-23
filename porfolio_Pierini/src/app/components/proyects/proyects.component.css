@@ -1,7 +1,4 @@
-.row{
-    background:#341066 ;
-    margin: 0;
-}
+
 h3 {
     color: #563298;
     
@@ -11,13 +8,14 @@ p{
 }
   
 .row{
+    background: radial-gradient(circle, rgba(0,12,140,1) 0%, rgba(77,0,149,1) 35%, rgba(161,17,196,1) 100%);
    
-    border: solid 5px #563298 ;
 }
 h1{
     text-align: center;
 }
 .carousel {
-    margin: 5%;
-    margin-left: 20%;
+    background: transparent;
+    
+    
 }

@@ -24,6 +24,8 @@ import { NewHysComponent } from './components/hys/new-hys.component';
 import { EditHysComponent } from './components/hys/edit-hys.component';
 import { EditAboutComponent } from './components/about/edit-about.component';
 
+import { NewProjectsComponent } from './components/proyects/new-projects.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +46,7 @@ import { EditAboutComponent } from './components/about/edit-about.component';
     NewHysComponent,
     EditHysComponent,
     EditAboutComponent,
+    NewProjectsComponent,
    
   ],
   imports: [
