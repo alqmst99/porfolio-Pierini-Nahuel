@@ -76,7 +76,6 @@
             <artifactId>connector-mysql</artifactId>
             <version>3.2.10</version>
         </dependency>
-        
     </dependencies>
 
     <build>

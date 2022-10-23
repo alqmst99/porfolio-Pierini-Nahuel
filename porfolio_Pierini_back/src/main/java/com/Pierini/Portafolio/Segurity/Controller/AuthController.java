@@ -35,13 +35,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin (origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:4200/")
 public class AuthController {
 
     @Autowired
     PasswordEncoder passwordEncoder;
     @Autowired
-    AuthenticationManager  authManager;
+    AuthenticationManager authManager;
     @Autowired
     UsuarioService usuarioService;
     @Autowired
@@ -79,10 +79,9 @@ public class AuthController {
     // login
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUser loginUser, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("field not maching"), HttpStatus.BAD_REQUEST);
-        }
-
+        
         Authentication authentication = authManager.authenticate(new UsernamePasswordAuthenticationToken(loginUser.getNameUser(), loginUser.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String Jwt = jwtProvider.generateToken(authentication);

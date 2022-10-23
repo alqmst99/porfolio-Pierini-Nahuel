@@ -47,12 +47,12 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
         
     }
 
-    @Bean
+    
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
         return super.authenticationManager();
     }
-
+    @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();

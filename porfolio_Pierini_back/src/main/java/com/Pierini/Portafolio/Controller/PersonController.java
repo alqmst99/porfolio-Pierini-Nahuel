@@ -40,7 +40,7 @@ ImpPersonService personService;
        Person person = personService.getOne(id).get();
         return new ResponseEntity(person, HttpStatus.OK);
     }
-    //create person
+    /*create person
     
     public ResponseEntity<?> create(@RequestBody DtoPerson dtoPerson) {
         if (StringUtils.isBlank(dtoPerson.getName())) 
@@ -54,7 +54,7 @@ ImpPersonService personService;
             personService.save(person);
             return new ResponseEntity(new Mensaje("Person hab bean add"), HttpStatus.OK);
 
-        }
+        }*/
     //Update Person
  @PutMapping("/update")
   public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPerson dtoPerson){
@@ -72,12 +72,12 @@ ImpPersonService personService;
       personService.save(person);
       return new ResponseEntity(new Mensaje("Person had bean update"),HttpStatus.OK);
  }
-    //Delete Person 
+    /*Delete Person 
   public ResponseEntity<?> delete(@PathVariable("id") int id){
       //validations
       if(!personService.existsById(id))
           return new ResponseEntity(new Mensaje("the id don't exist"),HttpStatus.BAD_REQUEST);
       personService.delete(id);
       return new ResponseEntity(new Mensaje("the Person hab bean delete"), HttpStatus.OK);
-  }
+  }*/
 }
