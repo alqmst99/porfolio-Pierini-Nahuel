@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Education } from 'src/app/model/education';
+import { Education } from 'src/app/model/education.model';
 import { EducationService } from 'src/app/service/education.service';
 import { TokenService } from 'src/app/service/token.service';
 
@@ -16,6 +16,7 @@ export class EducationComponent implements OnInit {
  
   isLogged =false;
   ngOnInit(): void {
+    this.chargeEdu();
     if(this.tokenService.getToken()){
       this.isLogged=true;
     } else{
@@ -23,7 +24,7 @@ export class EducationComponent implements OnInit {
       }
     }
 chargeEdu():void{
-  this.eduService.list().subscribe(data => { this.edu =data;})
+  this.eduService.list().subscribe(data =>{ this.edu =data;})
   }
  delete(id? : number ){
   if(id != undefined){

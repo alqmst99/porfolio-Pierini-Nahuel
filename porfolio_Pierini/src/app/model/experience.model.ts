@@ -1,5 +1,5 @@
 export class Experience {
-    id:number;
+    id?:number;
     nameE:string;
     dateI:string;
     dateF:string;

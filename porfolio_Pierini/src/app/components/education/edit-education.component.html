@@ -1,30 +1,30 @@
-<div class="row " style="background: #672067;" >
-    <div class="container col-6" style="border: 5px solid #000000 ; border-radius: 10px;" *ngIf="edu">
-<form (ngSubmit)="onEdit()" novalidate #f="ngForm">
-    <div class="form-outline ">
+<div class="row " style="background: #672067;">
+  <div class="container col-6" style="border: 5px solid #000000 ; border-radius: 10px;" *ngIf="edu">
+    <form (ngSubmit)="onEdit()" novalidate #f="ngForm">
+      <div class="form-outline ">
         <label class="form-label" for="nameE">institucion</label>
         <input type="text" id="nameE" class="form-control" name="nameE" [(ngModel)]="edu.nameE" required />
-        
+
       </div>
-      
+
       <div class="form-outline">
         <label class="form-label" for="dateI">Fecha de ingreso</label>
-        <input type="date" id="dateI" class="form-control" name="dateI" [(ngModel)]="edu.dateI" required/>
-        
+        <input type="date" id="dateI" class="form-control" name="dateI" [(ngModel)]="edu.dateI" required />
+
       </div>
-      
+
       <div class="form-outline">
         <label class="form-label" for="dateF">Fecha de egreso</label>
         <input type="date" id="dateF" class="form-control" name="dateF" [(ngModel)]="edu.dateF" required />
-        
+
       </div>
       <div class="form-outline">
         <label class="form-label" for="descE">titulo</label>
-        <input type="text" id="descE" class="form-control" name="descE" [(ngModel)]="edu.descEd" required/>
-        
+        <input type="text" id="descE" class="form-control" name="descE" [(ngModel)]="edu.descE" required />
+
       </div>
       <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
-</form>
-        
-    </div>
+    </form>
+
+  </div>
 </div>

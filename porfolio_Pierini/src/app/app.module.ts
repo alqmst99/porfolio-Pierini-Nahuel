@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
@@ -23,8 +23,11 @@ import { EditEducationComponent } from './components/education/edit-education.co
 import { NewHysComponent } from './components/hys/new-hys.component';
 import { EditHysComponent } from './components/hys/edit-hys.component';
 import { EditAboutComponent } from './components/about/edit-about.component';
-
 import { NewProjectsComponent } from './components/proyects/new-projects.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { interceptorProvider } from './service/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -51,13 +54,18 @@ import { NewProjectsComponent } from './components/proyects/new-projects.compone
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({}),
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
 
   ],
-  providers: [],
+  providers: [
+   interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

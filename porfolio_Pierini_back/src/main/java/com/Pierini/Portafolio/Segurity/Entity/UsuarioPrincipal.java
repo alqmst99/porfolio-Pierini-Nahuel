@@ -34,49 +34,58 @@ public class UsuarioPrincipal implements UserDetails {
    
     public static UsuarioPrincipal build(Usuario usuario) {
         List<GrantedAuthority> authorities = usuario.getRoles().stream().map(rol -> new SimpleGrantedAuthority(rol.getRolName().name())).collect(Collectors.toList());
-        return new UsuarioPrincipal(usuario.getNameUser(), usuario.getNameUser(), usuario.getEmail(), usuario.getPassword(), authorities);
+        return new UsuarioPrincipal(usuario.getName(), usuario.getNameUser(), usuario.getEmail(), usuario.getPassword(), authorities);
     }
 
-   
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;
     }
 
-   
+    
     @Override
     public String getPassword() {
         return password;
     }
 
-   
+    
     @Override
     public String getUsername() {
         return nameUser;
     }
 
-    
+   
     @Override
     public boolean isAccountNonExpired() {
         return true;
 
     }
 
+    
     @Override
     public boolean isAccountNonLocked() {
         return true;
 
     }
 
+    
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
 
     }
 
+    
     @Override
     public boolean isEnabled() {
         return true;
 
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+   
 }

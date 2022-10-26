@@ -1,5 +1,5 @@
 export class Hys {
-    id:number;
+    id?:number;
     name:string;
     porcent:number;
 

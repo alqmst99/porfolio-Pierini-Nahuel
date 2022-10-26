@@ -31,14 +31,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class SkillController {
     @Autowired
     SkillService skillS;
-     @GetMapping("/lista")
-    public ResponseEntity<List<Skill>>list(){
+
+   
+    @GetMapping("/list")
+    public ResponseEntity <List<Skill>>list(){
         List <Skill> list =skillS.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
+
     @GetMapping("/detail/{id}")
-   
-           
     public ResponseEntity<Skill> getById(@PathVariable("id") int id){
         if(!skillS.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
@@ -47,19 +48,22 @@ public class SkillController {
     }
     
     //create Experience
-    @PreAuthorize ("hasRole('ADMIN')")
+
+  
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoSkill dtoS){
         //validations
         if (StringUtils.isBlank(dtoS.getName()))
             return new ResponseEntity(new Mensaje("this field in obligatory"),HttpStatus.BAD_REQUEST);
         if (skillS.existsByName(dtoS.getName()))
-            return new ResponseEntity(new Mensaje("this experience i a ready exists"),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("this skill i a ready exists"),HttpStatus.BAD_REQUEST);
         Skill skill= new Skill(dtoS.getName(), dtoS.getPorcent());
         skillS.save(skill);
         return new ResponseEntity(new Mensaje("skill hab bean created"),HttpStatus.OK);
     }
     //update
+
+    
     @PreAuthorize ("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<?> update(@PathVariable ("id")int id, @RequestBody DtoSkill dtoS){
@@ -79,6 +83,8 @@ public class SkillController {
         return new ResponseEntity(new Mensaje("Skill hab bean update"),HttpStatus.OK);
     }
     //delete experience
+
+    
     @PreAuthorize ("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}" )
     public ResponseEntity<?> delete(@PathVariable("id") int id){

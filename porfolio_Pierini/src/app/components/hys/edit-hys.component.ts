@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Hys } from 'src/app/model/hys';
+import { Hys } from 'src/app/model/hys.model';
 import { HysService } from 'src/app/service/hys.service';
 
 @Component({

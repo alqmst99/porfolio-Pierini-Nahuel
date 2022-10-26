@@ -4,7 +4,7 @@ import com.Pierini.Portafolio.Dto.DtoPerson;
 import com.Pierini.Portafolio.Entity.Person;
 import com.Pierini.Portafolio.Service.ImpPersonService;
 import java.util.List;
-import org.apache.commons.lang3.StringUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,19 +23,22 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/person/")
 @CrossOrigin (origins = "http://localhost:4200/")
 public class PersonController {
 @Autowired 
 ImpPersonService personService;
 //list
-@GetMapping("/list")
+
+   
+@GetMapping("list")
     public ResponseEntity<List<Person>> list() {
         List<Person> list = personService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
    
-      @GetMapping("/detail/{id}")
+   
+    @GetMapping("detail/{id}")
     public ResponseEntity<Person> getById(@PathVariable("id") int id){
         if(!personService.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
@@ -58,8 +61,10 @@ ImpPersonService personService;
 
         }*/
     //Update Person
+
+   
     @PreAuthorize ("hasRole('ADMIN')")
- @PutMapping("/update")
+ @PutMapping("update/{id}")
   public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPerson dtoPerson){
       //validations
       //exist id?

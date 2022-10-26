@@ -12,66 +12,47 @@ import javax.validation.constraints.NotBlank;
  * @author Pieirni Nahuel Nicolas 
  *@email nahuel.pierini90@hotmail.com
  */
-public class DtoPerson {
-    @NotBlank
-private String name;
-@NotBlank
-    private String lastName;
-  @NotBlank
-    private String descP;
-   @NotBlank
-    private String imgP;
-//constructor
+public class DtoProjects {
 
-   
-    public DtoPerson() {
+      @NotBlank
+    private String name;
+    @NotBlank
+    private String descP;
+    @NotBlank
+    private String imgP;
+    
+    //constructor
+
+    public DtoProjects() {
     }
 
-   
-    public DtoPerson(String name, String lastName, String descP, String imgP) {
+    public DtoProjects(String name, String descP, String imgP) {
         this.name = name;
-        this.lastName = lastName;
         this.descP = descP;
         this.imgP = imgP;
     }
- 
+    //getters & setters
 
-    
     public String getName() {
         return name;
     }
 
-    
     public void setName(String name) {
         this.name = name;
     }
 
-    
-    public String getLastName() {
-        return lastName;
-    }
-
-    
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    
     public String getDescP() {
         return descP;
     }
 
-   
     public void setDescP(String descP) {
         this.descP = descP;
     }
 
-   
     public String getImgP() {
         return imgP;
     }
 
-   
     public void setImgP(String imgP) {
         this.imgP = imgP;
     }

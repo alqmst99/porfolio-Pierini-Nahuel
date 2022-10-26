@@ -1,6 +1,8 @@
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\NewUser.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\enums\RolName.java
-C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Interface\IPersonService.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\DtoSkill.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Repository\ISkillRepo.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\SkillController.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Entity\Skill.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\LoginUser.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Entity\Experience.java
@@ -10,12 +12,16 @@ C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfol
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Service\RolService.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Repository\IUsuarioRepo.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\PortafolioApplication.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\ExperienceController.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\DtoPerson.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Entity\UsuarioPrincipal.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\JwtDto.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Controller\AuthController.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Repository\IProjectsRepo.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Entity\Person.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Service\UsuarioService.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\PersonController.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\DtoExperience.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Service\EducationService.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Repository\IRolRepo.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Service\UserDetailImpl.java
@@ -27,7 +33,9 @@ C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfol
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\JWT\jwtTokenFilter.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Repository\IPersonRepository.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\EduactionController.java
-C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Controller\rolService.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Repository\IExperienceRepo.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Service\ExperienceService.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Service\SkillService.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\DtoEducation.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Entity\Rol.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\JWT\JwtEntryPoint.java

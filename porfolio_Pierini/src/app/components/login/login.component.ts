@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginUser } from 'src/app/model/login-user';
-import { Person } from 'src/app/model/person';
+import { LoginUser } from 'src/app/model/login-user.model';
+import { Person } from 'src/app/model/person.model';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
 

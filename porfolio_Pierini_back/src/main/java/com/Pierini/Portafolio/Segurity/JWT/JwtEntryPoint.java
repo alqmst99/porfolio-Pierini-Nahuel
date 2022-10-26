@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
  *
  * @author Pieirni Nahuel Nicolas
  */
+
 @Component
 public class JwtEntryPoint implements AuthenticationEntryPoint {
 

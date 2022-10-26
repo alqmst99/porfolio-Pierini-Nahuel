@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Education } from 'src/app/model/education';
+import { Education } from 'src/app/model/education.model';
 import { EducationService } from 'src/app/service/education.service';
 
 @Component({
@@ -15,8 +15,8 @@ export class EditEducationComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.eduService.detail(id).subscribe(data => { 
-      this.edu=data;
-    },err =>{
+      this.edu = data;
+    }, err =>{
       alert("error in the modifaication");
       this.router.navigate(['']);
     } )

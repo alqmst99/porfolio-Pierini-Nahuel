@@ -17,28 +17,33 @@ import org.springframework.stereotype.Service;
 public class ImpPersonService  {
     @Autowired 
     IPersonRepository ipersonRepo;
-    
-    public List<Person>list(){
+   
+    public List<Person> list(){
        return ipersonRepo.findAll();
    }
-public Optional <Person> getByName(String name){
+
+    public Optional <Person> getByName(String name){
     return ipersonRepo.findByName(name);
     
 }
- public Optional <Person> getOne(int id){
+
+    public Optional <Person> getOne(int id){
     return ipersonRepo.findById(id);
 }
-    
-public void save(Person person){
+    public void save(Person person){
     ipersonRepo.save(person);
 }
-public void delete (int id){
+
+    public void delete(int id){
     ipersonRepo.deleteById(id);
 }
-public boolean existsById(int id){
+
+   
+    public boolean existsById(int id){
     return ipersonRepo.existsById(id);
 }
-public boolean existsByName(String name){
+
+    public boolean existsByName(String name){
     return ipersonRepo.existsByName(name);
 }
 

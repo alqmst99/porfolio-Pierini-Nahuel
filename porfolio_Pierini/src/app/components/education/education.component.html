@@ -3,23 +3,23 @@
     <H1>Formación</H1>
     <div class="col-lg-8"></div>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <button id="button-add-about" class="button-add-about" routerLink="/newEducation"> <img src="assets/add.ico" alt=""> </button>
+        <button id="button-add-about" class="button-add-about" routerLink="/newEducation"> <img src="assets/add.ico" alt="" *ngIf="isLogged"> </button>
        
     </div>
-    
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        
-        <ul class="" *ngFor="let education of edu">
+    <div  *ngFor="let education of edu">
+        <ul class="fluid" >
             <li>
-                <h2>{{education.nameE}}</h2>
-                <h3>{{education.dateI}}-{{education.dateF}} </h3>
-                
-            </li>
-            <p><b>{{education.descEd}} </b></p>
+                <h2>INSTITUCION:  {{education.nameE}}</h2><br>
+                <h3>Fecha: {{education.dateI}}</h3>
+                 <h3> {{education.dateF}}</h3>
+                <h3> Titulo 
+                    {{education.dateI}}</h3>
+                </li>
+            
                 <button id="button-edit" class="button-edit " routerLink="/editEducation/{{education.id}} "> <img src="assets/edit.ico" alt=""> </button>
         <button id="button-erase-about" (click)="delete(education.id)"> <img src="assets/del.ico" alt=""></button>
         </ul>
-       
+        
+   
     </div>
 </div>

@@ -33,16 +33,17 @@ public class ExperienceController  {
     ExperienceService expServ;
     
     //lista
-    @GetMapping("/lista")
+
+   
+    @GetMapping("/list")
     public ResponseEntity<List<Experience>>list(){
         List <Experience> list =expServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-    @PreAuthorize ("hasRole('ADMIN') ")
-    @GetMapping("/detail/{id}")
    
-           
-    public ResponseEntity<Experience> getById(@PathVariable("id") int id){
+   
+    @GetMapping("/detail/{id}")
+     public ResponseEntity<Experience> getById(@PathVariable("id") int id){
         if(!expServ.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         Experience experiencia = expServ.getOne(id).get();
@@ -50,6 +51,8 @@ public class ExperienceController  {
     }
     
     //create Experience
+
+    
     @PreAuthorize ("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoExperience dtoExp){
@@ -63,6 +66,8 @@ public class ExperienceController  {
         return new ResponseEntity(new Mensaje("Experience hab bean created"),HttpStatus.OK);
     }
     //update
+
+    
     @PreAuthorize ("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<?> update(@PathVariable ("id")int id, @RequestBody DtoExperience dtoExp){
@@ -84,6 +89,8 @@ public class ExperienceController  {
         return new ResponseEntity(new Mensaje("Experience hab bean update"),HttpStatus.OK);
     }
     //delete experience
+
+   
     @PreAuthorize ("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}" )
     public ResponseEntity<?> delete(@PathVariable("id") int id) {

@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private Long id;
+    private int id;
     @NotNull
     
     private String name;
@@ -28,9 +28,13 @@ public class Person {
     @NotNull
     private String imgP;
 
+    /**
+     *
+     */
     public Person() {
     }
 
+   
     public Person(String name, String lastName, String descP, String imgP) {
         this.name = name;
         this.lastName = lastName;
@@ -38,42 +42,51 @@ public class Person {
         this.imgP = imgP;
     }
 
-    public Long getId() {
+   
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
+   
     public String getName() {
         return name;
     }
 
+    
     public void setName(String name) {
         this.name = name;
     }
 
+    
     public String getLastName() {
         return lastName;
     }
 
+  
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+ 
     public String getDescP() {
         return descP;
     }
 
+   
     public void setDescP(String descP) {
         this.descP = descP;
     }
 
+   
     public String getImgP() {
         return imgP;
     }
 
+  
     public void setImgP(String imgP) {
         this.imgP = imgP;
     }

@@ -17,6 +17,7 @@ import javax.validation.constraints.NotNull;
  *
  * @author Pieirni Nahuel Nicolas 
  */
+
 @Entity
 public class Rol {
 @Id
@@ -26,15 +27,13 @@ private int id;
 @Enumerated(EnumType.STRING)
 private RolName rolName;
 
-    
-    public Rol() {
+       public Rol() {
     }
 
     public Rol(RolName rolName) {
         this.rolName = rolName;
     }
 
-   
     public int getId() {
         return id;
     }

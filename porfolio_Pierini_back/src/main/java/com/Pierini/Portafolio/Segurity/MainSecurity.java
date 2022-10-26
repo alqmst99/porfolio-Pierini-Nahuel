@@ -27,37 +27,43 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class MainSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    UserDetailImpl userDetailServiceImpl;
+    UserDetailImpl userDetailsService;
     @Autowired
     JwtEntryPoint jwtEntryPoint;
 
+    
     @Bean
     public jwtTokenFilter jwtTokenFilter() {
         return new jwtTokenFilter();
     }
 
+   
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailServiceImpl).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
         
     }
 
-    
+   
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
         return super.authenticationManager();
     }
+
+   
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
+ 
+    
     @Override
     protected void configure( HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().authorizeHttpRequests()

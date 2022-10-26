@@ -18,7 +18,7 @@ export class TokenService {
   public getToken(): string {
     return sessionStorage.getItem(TOKEN_KEY)!;
   }
-  public setNameUSer(nameUser: string): void {
+  public setNameUser(nameUser: string): void {
     window.sessionStorage.removeItem(NAMEUSER_KEY);
     window.sessionStorage.setItem(NAMEUSER_KEY, nameUser)
   }

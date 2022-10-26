@@ -3,20 +3,22 @@
   <div class="col-lg-8"></div>
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
     <button id="button-add-about" type="button" class="button-add" routerLink="/newSkill"> <img
-      src="assets/add.ico" alt=""> </button>
+      src="assets/add.ico" alt="" *ngIf="isLogged"> </button>
      </div>
-  <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of Skill">
+  <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">
+    <div>
     <circle-progress 
     [percent]="skill.porcent" 
     [radius]="50" 
-    [title]="'skill.name'" 
-    [showUnits]="false" 
+    [title]="skill.name" 
+    [showUnits]="true" 
     [outerStrokeWidth]="10"
     [innerStrokeWidth]="3"
     [outerStrokeColor]="'#ee9900'" 
     [innerStrokeColor]="'#C7E596'" 
     [animation]="true"
     [animationDuration]="500"></circle-progress>
+  </div>
     <button id="button-edit" class="button-edit " routerLink="/editSkill/{{skill.id}}"> <img src="assets/add.ico" alt=""> </button>
     <button id="button-erase" (click)="delete(skill.id)"> <img src="assets/del.ico" alt=""></button>
   </div>
